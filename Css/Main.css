@@ -1,0 +1,62 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+header {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  border: 10px solid #26547c;
+}
+
+#ImgFabricante {
+  width: 300px;
+  height: 300px;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 50%;
+  object-fit: full;
+  border: 3px solid #26547c;
+}
+
+#menuDropdown {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
+
+#menuToggle {
+  display: none;
+}
+
+.toggleButton {
+  width: 0px;
+  height: 0px;
+  background-color: #26547c;
+  border-left: 12px;
+  border-right: 12px;
+  border-top: 12px;
+  display: inline-block;
+}
+
+.menu {
+  display: none; /* escondido por padrão */
+}
+
+#menuToggle:checked + .toggleButton + .menu {
+  display: block; /* mostra o menu quando o checkbox está marcado */
+}
+
+ul,
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#imgPrincipalListify {
+}
