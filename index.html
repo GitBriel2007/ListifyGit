@@ -3,36 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Css/Main.css" />
+    <link rel="stylesheet" href="Css/Estudo.css" />
     <title>Listify</title>
   </head>
   <body>
-    <header elemento Pai>
-      <figure elemento Filho e pai class="imgPerfil">
+    <header>
+      <figure class="fotoPerfil">
         <img id="ImgFabricante" src="Images/Fabricante.jpg" />
       </figure>
 
-      <div elemento Filho e pai class="menuDropdown" id="menuDropdown">
-        <input elemento filho type="checkbox" id="menuToggle" />
-        <label elemento filho for="menuToggle" class="toggleButton"></label>
+      <div class="menuDropdown" id="menuDropdown">
+        <input type="checkbox" id="menuToggle" />
+        <label for="menuToggle" class="toggleButton"></label>
 
-        <nav elemento Filho e pai class="menu">
-          <ul elemento Filho>
-            <li><a href="#">Adicionar Produto</a></li>
-            <li><a href="#">Editar perfil</a></li>
-            <li><a href="#">Ver Perfil</a></li>
-            <li><a href="#">Sair</a></li>
-          </ul>
+        <nav class="menu">
+          <a class="linksMenu" href="#">Adicionar Produto</a>
+          <a class="linksMenu" href="#">Editar perfil</a>
+          <a class="linksMenu" href="#">Ver Perfil</a>
+          <a class="linksMenu" href="#">Sair</a>
         </nav>
       </div>
 
-      <figure elemento Filho e pai class="imgLogo">
-        <img
-          elemento
-          filho
-          id="imgPrincipalListify"
-          src="Images/imgPrincipalListify.png"
-        />
+      <figure class="fotoLogo">
+        <img id="imgPrincipalListify" src="Images/imgPrincipalListify.png" />
       </figure>
     </header>
 

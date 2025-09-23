@@ -1,0 +1,64 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+header {
+  width: 98vw;
+  height: 400px;
+   display: flex;
+}
+
+.fotoPerfil {
+  width: 300px;
+  height: 300px;
+}
+
+#ImgFabricante {
+  width: 250px;
+  height: 250px;
+  margin: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #26547c;
+}
+
+#menuDropdown {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border: 2px solid #26547c;
+  border-radius: 8px;
+}
+
+#menuToggle {
+  margin: 5px;
+}
+
+.linksMenu {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+
+.fotoLogo {
+  width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#imgPrincipalListify {
+  width: 800px;
+  height: 200px;
+  margin: 30px;
+  padding: 40px;
+}
