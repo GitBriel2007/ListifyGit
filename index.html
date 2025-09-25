@@ -11,14 +11,51 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <header>
-      <figure class="fotoPerfil">
-        <img id="ImgFabricante" src="Images/Fabricante.jpg" />
+      <figure class="fotoPerfil img-fluid">
+        <img id="ImgFabricante" class="img-fluid" src="Images/Fabricante.jpg" />
       </figure>
 
       <div class="menuDropdown" id="menuDropdown">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="bi bi-caret-right-fill"></i>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" id="linksMenu" href="#"
+                  >Adicionar Produto</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" id="linksMenu" href="#"
+                  >Editar Perfil</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" id="linksMenu" href="#">Ver Perfil</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Sair</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
         <input type="checkbox" id="menuToggle" />
         <i id="menuToggle" class="bi bi-caret-right-fill"></i>
 
@@ -30,14 +67,24 @@
         </nav>
       </div>
 
-      <figure class="fotoLogo">
-        <img id="imgPrincipalListify" src="Images/imgPrincipalListify.png" />
+      <figure class="fotoLogo img-fluid">
+        <img
+          id="imgPrincipalListify"
+          class="img-fluid"
+          src="Images/imgPrincipalListify.png"
+        />
       </figure>
     </header>
 
     <main>
       <section></section>
     </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
