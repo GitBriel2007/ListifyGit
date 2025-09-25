@@ -12,13 +12,16 @@ header {
 }
 
 .fotoPerfil {
-  width: 300px;
-  height: 300px;
+  margin: 0px;
+  margin-top: 20px;
+  margin-left: 10px;
+  width: 250px;
+  height: 250px;
 }
 
 #ImgFabricante {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   margin: 35px;
   border-radius: 50%;
   object-fit: cover;
@@ -27,13 +30,33 @@ header {
 
 #menuDropdown {
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  width: 200px;
+  height: 300px;
+  position: relative;
+  right: 13px;
 }
 
-#linksMenu {
-  list-style: none;
-  text-decoration: none;
-  color: black;
+.dropdown-menu {
+  left: 17px !important;
+  transform: translateX(10px) !important;
+  transform: translateY(9px) !important;
+  background-color: #26547c !important;
+  border-radius: 15px;
+}
+
+i {
+  color: #26547c !important;
+}
+
+.dropdown-menu.show {
+  border-radius: 15px !important;
+}
+
+.dropdown-item {
+  font-size: 18.5px;
+  color: #fafafa !important;
+  background-color: #26547c !important;
 }
 
 .fotoLogo {
