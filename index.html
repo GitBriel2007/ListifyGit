@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Css/Estudo.css" />
+    <link rel="stylesheet" href="Css/CabecalhoHome.css" />
     <title>Listify</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
@@ -14,9 +14,16 @@
   </head>
   <body>
     <header>
-      <figure class="fotoPerfil img-fluid">
-        <img id="ImgFabricante" class="img-fluid" src="Images/Fabricante.jpg" />
+      <figure class="fotoLogo">
+        <img
+          id="imgPrincipalListify"
+          src="Images/Logo/imgPrincipalListify.png"
+        />
       </figure>
+
+      <div class="iconStore">
+        <a href="#"><img id="iconStore" src="Images/Icons/Store.png" /> </a>
+      </div>
 
       <div class="menuDropdown" id="menuDropdown">
         <ul
@@ -29,7 +36,7 @@
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              <i class="bi bi-caret-right-fill"></i>
+              <i class="bi bi-caret-left-fill"></i>
             </a>
 
             <ul class="dropdown-menu">
@@ -43,6 +50,10 @@
                 <a class="dropdown-item" href="#">Ver Perfil</a>
               </li>
               <li>
+                <a class="dropdown-item" href="#">Sua Loja</a>
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
                 <a class="dropdown-item" href="#">Sair</a>
               </li>
             </ul>
@@ -50,11 +61,11 @@
         </ul>
       </div>
 
-      <figure class="fotoLogo img-fluid">
+      <figure class="fotoPerfil">
         <img
-          id="imgPrincipalListify"
+          id="ImgFabricante"
           class="img-fluid"
-          src="Images/imgPrincipalListify.png"
+          src="Images/Perfil/Fabricante.jpg"
         />
       </figure>
     </header>
