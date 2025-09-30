@@ -5,29 +5,23 @@
   padding: 0px;
 }
 
-header {
+#container {
   display: flex;
-  justify-content: space-between;
 }
 
-.fotoLogo {
+#divLogo {
   display: flex;
-  position: relative;
-  left: 45px;
-  top: 25px;
+  height: 100%;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
 }
 
 #imgPrincipalListify {
+  align-self: center;
+  margin: 40px;
   width: 450px;
   height: 200px;
-}
-
-.iconStore img {
-}
-
-.fotoPerfil {
-  display: flex;
-  justify-items: flex-end;
 }
 
 #ImgFabricante {
@@ -40,25 +34,26 @@ header {
 }
 
 #menuDropdown {
-  display: flex;
-}
-
-.dropdown-menu.show {
-  border-radius: 20px !important;
-}
-
-.dropdown-menu {
-  transform: translateX(10px) !important;
-  transform: translateY(9px) !important;
-  background-color: #26547c !important;
+  display: grid;
+  grid-template-columns: 20px 200px;
+  margin-left: auto;
 }
 
 i {
+  position: relative;
+  left: 35px;
+
   color: #26547c !important;
+}
+
+.dropdown-menu {
+  background-color: #26547c !important;
+  transform: translateX(-150px) !important;
 }
 
 .dropdown-menu.show {
   border-radius: 20px !important;
+  transform: translateX(-150px) !important;
 }
 
 .dropdown-item {

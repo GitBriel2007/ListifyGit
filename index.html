@@ -13,18 +13,14 @@
     />
   </head>
   <body>
-    <header>
-      <figure class="fotoLogo">
+    <header id="container">
+      <div id="divLogo">
         <img
           id="imgPrincipalListify"
+          class="img-fluid"
           src="Images/Logo/imgPrincipalListify.png"
         />
-      </figure>
-
-      <div class="iconStore">
-        <a href="#"><img id="iconStore" src="Images/Icons/Store.png" /> </a>
       </div>
-
       <div class="menuDropdown" id="menuDropdown">
         <ul
           class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-center align-items-center"
@@ -59,16 +55,36 @@
             </ul>
           </li>
         </ul>
-      </div>
 
-      <figure class="fotoPerfil">
         <img
           id="ImgFabricante"
           class="img-fluid"
           src="Images/Perfil/Fabricante.jpg"
         />
-      </figure>
+      </div>
     </header>
+
+    <nav>
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a
+            href="#"
+            class="btn btn-dark dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            >Categoria</a
+          >
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>
+      <a href="#"></a>
+      <a href="#">Lista de Produtos</a>
+      <a href="#">Fabricantes</a>
+    </nav>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
