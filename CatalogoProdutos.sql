@@ -1,0 +1,25 @@
+CREATE DATABASE catalogoProdutos;
+
+USE catalogoProdutos;
+
+CREATE TABLE cliente (
+	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    cpf VARCHAR(20) NOT NULL UNIQUE,
+    nome VARCHAR(30) NOT NULL,
+    email VARCHAR(30) NOT NULL,
+    telefone INT NOT NULL,
+    tipo VARCHAR(10) NOT NULL
+);
+
+CREATE TABLE produto (
+	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nome VARCHAR(30) NOT NULL,
+    descricao VARCHAR(30) NOT NULL,
+    preco DECIMAL NOT NULL,
+    qntEstoque INT NOT NULL DEFAULT 0,
+    categoria VARCHAR(30) NOT NULL
+);
+
+	
+
+	
