@@ -13,6 +13,8 @@
     />
   </head>
   <body>
+  <a href="Telas/UsuarioCadastro.php">Cadastro
+  </a>
     <header>
       <div id="divLogo">
         <img

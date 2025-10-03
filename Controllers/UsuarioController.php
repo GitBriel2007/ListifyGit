@@ -33,7 +33,7 @@ Class UsuarioController {
         $this->usuario->email = $dados["email"];
         $this->usuario->telefone = $dados["telefone"];
         $this->usuario->imagem = $dados["imagem"];
-        $this->usuario->tipo = $dados["tipo"];
+        $this->usuario->tipoUsuario = $dados["tipoUsuario"];
 
         if ($this->usuario->cadastrar()) {
             header("Location: index.php");
@@ -51,7 +51,7 @@ Class UsuarioController {
         $this->usuario->email = $dados["email"];
         $this->usuario->telefone = $dados["telefone"];
         $this->usuario->imagem = $dados["imagem"];
-        $this->usuario->tipo = $dados["tipo"];
+        $this->usuario->tipoUsuario = $dados["tipoUsuario"];
 
         if ($this->usuario->atualizar()) {
             header("Location: index.php");

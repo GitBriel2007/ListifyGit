@@ -1,6 +1,7 @@
 <?php
 
-Class Usuario {
+class Usuario
+{
 
     public $id;
     public $senha;
@@ -9,41 +10,46 @@ Class Usuario {
     public $email;
     public $telefone;
     public $imagem;
-    public $tipo;
+    public $tipoUsuario;
 
-    public function __construct($bd) {
+    public function __construct($bd)
+    {
         $this->bd = $bd;
     }
 
-    public function lerTodosUsuarios() {
-        $sql = "SELECT * FROM usuario ORDER BY nome ASC";
+    public function lerTodosUsuarios()
+    {
+        $sql = "SELECT * FROM READ_ALL_USUARIOS";
         $resultado = $this->bd->query($sql);
         $resultado->execute();
 
         return $resultado->fetchAll(PDO::FETCH_OBJ);
     }
 
-    public function lerUsuario($nome) {
-        $nome = "%" . $nome ."%";
-        $sql = "SELECT * FROM usuario WHERE nome LIKE :nome ORDER BY nome ASC";
+    public function lerUsuario($nome)
+    {
+        $nome = "%" . $nome . "%";
+        $sql = "SELECT * FROM READ_USUARIO";
         $resultado = $this->bd->query($sql);
-        $resultado ->bindParam(':nome', $nome, PDO::PARAM_STR);
+        $resultado->bindParam(':nome', $nome, PDO::PARAM_STR);
         $resultado->execute();
 
         return $resultado->fetchAll(PDO::FETCH_OBJ);
     }
 
-    public function pesquisaUsuario($id) {
-        $sql = "SELECT * FROM usuario WHERE id LIKE :id ORDER BY id ASC";
+    public function pesquisaUsuario($id)
+    {
+        $sql = "SELECT * FROM SEARCH_USUARIO";
         $resultado = $this->bd->query($sql);
-        $resultado ->bindParam(':id', $id, PDO::PARAM_STR);
+        $resultado->bindParam(':id', $id, PDO::PARAM_STR);
         $resultado->execute();
 
         return $resultado->fetchAll(PDO::FETCH_OBJ);
     }
 
-    public function cadastrar() {
-        $sql = "INSERT  INTO usuario(senha, cpf, nome, email, telefone, imagem, tipo) VALUES(:senha, :cpf, :nome, :email, :telefone, :imagem, :tipo)";
+    public function cadastrar()
+    {
+        $sql = "CALL create_Usuario ( :senha , :cpf , :nome ,  :email , :telefone,  :imagem ,  :tipoUsuario )";
         $stmt = $this->bd->prepare($sql);
         $stmt->bindParam(':senha', $this->senha, PDO::PARAM_STR);
         $stmt->bindParam(':cpf', $this->cpf, PDO::PARAM_STR);
@@ -51,7 +57,7 @@ Class Usuario {
         $stmt->bindParam(':email', $this->email, PDO::PARAM_STR);
         $stmt->bindParam(':telefone', $this->telefone, PDO::PARAM_STR);
         $stmt->bindParam(':imagem', $this->imagem, PDO::PARAM_STR);
-        $stmt->bindParam(':tipo', $this->tipo, PDO::PARAM_STR);
+        $stmt->bindParam(':tipoUsuario', $this->tipoUsuario, PDO::PARAM_STR);
 
         if ($stmt->execute()) {
             return true;
@@ -60,17 +66,18 @@ Class Usuario {
         }
     }
 
-    public function atualizar() {
-        $sql = "UPDATE usuarios SET senha = :senha, cpf = :cpf, nome = :nome, email - :email, telefone = :telefone, imagem = :imagem, tipo = :tipo WHERE id = :id";
+    public function atualizar()
+    {
+        $sql = "CALL update_Usuario ( :id , :senha , :cpf , :nome ,  :email , :telefone,  :imagem ,  :tipoUsuario )";
         $stmt = $this->bd->prepare($sql);
+        $stmt->bindParam(':id', $this->id, PDO::PARAM_INT);
         $stmt->bindParam(':senha', $this->senha, PDO::PARAM_STR);
         $stmt->bindParam(':cpf', $this->cpf, PDO::PARAM_STR);
         $stmt->bindParam(':nome', $this->nome, PDO::PARAM_STR);
         $stmt->bindParam(':email', $this->email, PDO::PARAM_STR);
         $stmt->bindParam(':telefone', $this->telefone, PDO::PARAM_STR);
         $stmt->bindParam(':imagem', $this->imagem, PDO::PARAM_STR);
-        $stmt->bindParam(':tipo', $this->tipo, PDO::PARAM_STR);
-        $stmt->bindParam(':id', $this->id, PDO::PARAM_INT);
+        $stmt->bindParam(':tipoUsuario', $this->tipoUsuario, PDO::PARAM_STR);
         
         if ($stmt->execute()) {
             return true;
@@ -79,8 +86,9 @@ Class Usuario {
         }
     }
 
-    public function excluir() {
-        $sql =  "DELELE FROM usuario WHERE id = :id";   
+    public function excluir()
+    {
+        $sql = "CALL delete_Usuario( :id )";
         $stmt = $this->bd->prepare($sql);
         $stmt->bindParam(':id', $this->id, PDO::PARAM_INT);
 

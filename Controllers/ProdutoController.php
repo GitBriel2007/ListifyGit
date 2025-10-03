@@ -32,7 +32,8 @@ Class ProdutoController {
         $this->produto->preco = $dados["preco"];
         $this->produto->qntEstoque = $dados["qntEstoque"];
         $this->produto->categoria = $dados["categoria"];
-        $this->usuario->tipo = $dados["tipo"];
+        $this->produto->imagem = $dados["imagem"];
+        $this->produto->idUsuario = $dados["idUsuario"];
 
         if ($this->produto->cadastrar()) {
             header("Location: index.php");
@@ -48,7 +49,8 @@ Class ProdutoController {
         $this->produto->preco = $dados["preco"];
         $this->produto->qntEstoque = $dados["qntEstoque"];
         $this->produto->categoria = $dados["categoria"];
-        $this->usuario->tipo = $dados["tipo"];
+        $this->produto->imagem = $dados["imagem"];
+        $this->produto->idUsuario = $dados["idUsuario"];
 
         if ($this->produto->atualizar()) {
             header("Location: index.php");
@@ -57,10 +59,11 @@ Class ProdutoController {
         return false;
     }
 
-    public function excluirProduto($id) {
+    public function excluirProduto($id , $idUsuario) {
        $this->produto->id = $id;
+       $this->produto->idUsuario = $idUsuario;
 
-       if ($this->produto->excluir()) {
+       if ($this->produto->excluir($id, $idUsuario)) {
             header("Location: index.php");
             exit();
        }

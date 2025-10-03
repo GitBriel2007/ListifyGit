@@ -1,7 +1,7 @@
 <?php
 
     Class database {
-        private $host = "127.0.0.1:3307";
+        private $host = "127.0.0.1:3316";
         private $banco = "catalogoProdutos";
         private $usuario = "root";
         private $senha = "123456";

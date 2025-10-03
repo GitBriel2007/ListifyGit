@@ -19,21 +19,31 @@
     <title>Cadastro de Usuarios</title>
 </head>
 <body>
-    <h1>Cadastro</h1>
+<h1>Cadastre-Se</h1>
 
         <form method="post" action="UsuarioCadastro.php">
             <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" placeholder="nome" required>
+            <input type="text" placeholder="Nome" id="nome" name="nome" required>
+
             <label for="email">Email</label>
-            <input type="text" id="email" name="email" placeholder="email" required>
-            <label for="cpf">Cpf</label>
-            <input type="text" id="cpf" name="cpf" placeholder="cpf" required>
+            <input type="email" placeholder="exemplo@com.com" id="email" name="email" required>
+
+            <label for="cpf">CPF</label>
+            <input type="text" inputmode="numeric" maxlength="14" placeholder="000.000.000-00" id="cpf" name="cpf"
+                   required>
+
             <label for="telefone">Telefone</label>
-            <input type="text" id="telefone" name="telefone" placeholder="telefone" required>
+            <input type="text" placeholder="(00) 00000-0000" maxlength="15" id="telefone" name="telefone" required>
+
             <label for="senha">Senha</label>
-            <input type="password" id="senha" name="senha" placeholder="senha" required>
-            <label for="tipo">Tipo</label>
-            <input type="text" id="Tipo" placeholder="tipo" required>
+            <input type="password" placeholder="Senha" id="senha" name="senha" required>
+
+            <label for="tipo">Tipo de Usuário</label>
+            <select id="tipo" name="tipoUsuario" required>
+                <option value="cliente">Cliente</option>
+                <option value="fabricante">Fabricante</option>
+            </select>
+
             <button type="submit" name="cadastrar">Cadastrar</button>
         </form>
 </body>
