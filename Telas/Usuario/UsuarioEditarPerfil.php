@@ -1,13 +1,19 @@
 <?php
 
-    include_once '../Controllers/UsuarioController.php';
+    include_once __DIR__  . '/../../Controllers/UsuarioController.php';
 
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $controller = new UsuarioController();
-        if (isset($_POST['cadastrar'])) {
-            $controller->cadastrarUsuario($_POST['usuario']);
-        }
+    $controller = new UsuarioController();
+
+if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET["editarPerfil"])) {
+        $edicao = $controller->pesquisarUsuarioID($_GET["editarPerfil"]);
+    if (isset($_POST['atualizar'])) {
+        $controller->atualizarUsuario($_POST['usuario']);
+    } elseif ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["usuario"])) {
+        $controller->atualizarUsuario($_POST['usuario']);
+    } else {
+        header("Location: index.php");
     }
+}
 
 ?>
 
@@ -16,12 +22,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cadastro de Usuarios</title>
+    <title>Edição de Perfil</title>
 </head>
 <body>
-<h1>Cadastre-Se</h1>
+<h1>Editar Perfil</h1>
 
-        <form method="post" action="UsuarioCadastro.php">
+        <form method="post" action="UsuarioCadastro.php" enctype="multipart/form-data">
+
+            <label for="fileToUpload">Imagem </label>
+            <input type="file" placeholder="Selecione uma Boa Imagem" id="fileToUpload" name="usuario[fileToUpload]" required>
+
             <label for="nome">Nome</label>
             <input type="text" placeholder="Nome" id="nome" name="usuario[nome]" required>
 

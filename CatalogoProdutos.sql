@@ -9,10 +9,10 @@ CREATE TABLE usuario (
     nome VARCHAR(30) NOT NULL,
     email VARCHAR(30) NOT NULL,
     telefone VARCHAR(15) NOT NULL,
-	imagem VARCHAR(255) NOT NULL,
+	imagem VARCHAR(255),
     tipoUsuario VARCHAR(20) NOT NULL
 );
-select * from usuario;
+
 CREATE TABLE produto (
 	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 	nome VARCHAR(30) NOT NULL,

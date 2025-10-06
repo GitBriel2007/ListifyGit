@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -37,10 +41,7 @@
 
             <ul class="dropdown-menu">
               <li>
-                <a class="dropdown-item" href="#">Adicionar Produto</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">Editar Perfil</a>
+                <a class="dropdown-item" href="Telas/Usuario/UsuarioEditarPerfil.php?editarPerfi=< $usuario->id ?>">Editar Perfil</a>
               </li>
               <li>
                 <a class="dropdown-item" href="#">Ver Perfil</a>
@@ -57,9 +58,9 @@
         </ul>
 
         <img
-          id="ImgFabricante"
+          id="img-perfil-padrao"
           class="img-fluid"
-          src="Images/Perfil/Fabricante.jpg"
+          src="Images/Icons/PerfilPadrao.png"
         />
       </div>
     </header>
