@@ -1,5 +1,14 @@
 <?php
 
+    include_once __DIR__ . "/Configs/Database.php";
+    include_once __DIR__ . "/Objects/Usuario.php";
+    include_once __DIR__ . "/Controllers/UsuarioController.php";
+
+    $controller = new UsuarioController();
+    $usuarios = $controller->indexUsuario();
+    global  $usuarios;
+
+
 ?>
 
 <!DOCTYPE html>
@@ -39,9 +48,11 @@
               <i class="bi bi-caret-left-fill"></i>
             </a>
 
+          <?php if ($usuarios) : ?>
+            <?php foreach ($usuarios as $usuario) : ?>
             <ul class="dropdown-menu">
               <li>
-                <a class="dropdown-item" href="Telas/Usuario/UsuarioEditarPerfil.php?editarPerfi=< $usuario->id ?>">Editar Perfil</a>
+                <a class="dropdown-item" href="Telas/Usuario/UsuarioEditarPerfil.php?editarPerfi=<?= $usuario->id ?>">Editar Perfil</a>
               </li>
               <li>
                 <a class="dropdown-item" href="#">Ver Perfil</a>
@@ -56,6 +67,8 @@
             </ul>
           </li>
         </ul>
+          <?php endforeach; ?>
+      <?php endif; ?>
 
         <img
           id="img-perfil-padrao"

@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fca45c5-4cb6-479e-86d1-ce6a2e3e5496" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Images/Icons/PerfilPadrao.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Telas/Produto/AdicionarProduto.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Telas/Usuario/UsuarioEditarPerfil.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CatalogoProdutos.sql" beforeDir="false" afterPath="$PROJECT_DIR$/CatalogoProdutos.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/ProdutoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ProdutoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/UsuarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UsuarioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Css/CabecalhoHome.css" beforeDir="false" afterPath="$PROJECT_DIR$/Css/CabecalhoHome.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Header.php" beforeDir="false" afterPath="$PROJECT_DIR$/Login/Header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Login/Login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/Login/Logout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Session.php" beforeDir="false" afterPath="$PROJECT_DIR$/Login/Session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Telas/AdicionarProduto.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Telas/PainelUsuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/Telas/Usuario/PainelUsuario.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Telas/UsuarioCadastro.php" beforeDir="false" afterPath="$PROJECT_DIR$/Telas/Usuario/UsuarioCadastro.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/Configs/Database.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +32,7 @@
     &quot;accountId&quot;: &quot;80b392b2-6eed-452b-b851-44cba365ea69&quot;
   }
 }</component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.0.25" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -57,6 +44,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "PHP Built-in Web Server.Server Listify.executor": "Run",
     "PHP Built-in Web Server.server.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -69,6 +57,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
@@ -93,8 +82,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-PS-252.23892.419" />
-        <option value="bundled-php-predefined-a98d8de5180a-c72577f2c82f-com.jetbrains.php.sharedIndexes-PS-252.23892.419" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-PS-252.26830.95" />
+        <option value="bundled-php-predefined-a98d8de5180a-9b563d34894c-com.jetbrains.php.sharedIndexes-PS-252.26830.95" />
       </set>
     </attachedChunks>
   </component>
@@ -114,6 +103,8 @@
       <workItem from="1759769448608" duration="35000" />
       <workItem from="1759769495561" duration="12000" />
       <workItem from="1759769508810" duration="10961000" />
+      <workItem from="1759784550907" duration="1692000" />
+      <workItem from="1759786397802" duration="1540000" />
     </task>
     <servers />
   </component>
