@@ -20,7 +20,7 @@ header #divLogo {
 header #imgPrincipalListify {
   align-self: center;
   margin: 40px;
-  width: 450px;
+  width: 400px;
   height: auto;
 }
 
@@ -67,4 +67,12 @@ header .dropdown-item {
 
 header .dropdown-divider {
   background-color: #fafafa;
+}
+
+nav {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: auto auto auto;
+  gap: 30px;
+  width: 80%;
 }

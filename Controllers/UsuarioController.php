@@ -26,7 +26,6 @@ Class UsuarioController {
     }
 
     public function cadastrarUsuario($dados) {
-        $this->usuario->id = $dados["id"];
         $this->usuario->senha = $dados["senha"];
         $this->usuario->cpf = $dados["cpf"];
         $this->usuario->nome = $dados["nome"];
