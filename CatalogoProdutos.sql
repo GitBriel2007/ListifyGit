@@ -54,8 +54,6 @@ BEGIN
 END $$
 DELIMITER ;
 
-CALL create_Usuario('senha123', '111.111.111-11', 'João Silva', 'joao@email.com', '11999999999', 'joao.jpg', 'fabricante');
-
 DELIMITER $$
 CREATE PROCEDURE update_Usuario (_id INT,_senha VARCHAR(255), _cpf VARCHAR(20), _nome VARCHAR(30), _email VARCHAR(30) , _telefone VARCHAR(15), _imagem VARCHAR(255),  _tipoUsuario VARCHAR(20))
 BEGIN
@@ -64,16 +62,12 @@ BEGIN
 END $$
 DELIMITER ;
 
-CALL update_Usuario(1,'senha123', '111.111.111-11', 'João Silva', 'joao@email.com', '11999999999', 'joao.jpg', 'fabricante');
-
 DELIMITER $$
 CREATE PROCEDURE delete_Usuario( _id INT)
 BEGIN
 	DELETE FROM Usuario	WHERE id = _id;
 END $$
 DELIMITER ;
-
-CALL delete_Usuario(3);
 
 -- View Usuario
 
@@ -96,8 +90,6 @@ BEGIN
 END $$
 DELIMITER ;
 
-CALL create_Produto('Smartphone 5G', 'Celular com processador Octa-Core, 8GB RAM e 256GB armazenamento.', 2999.90, 20, 'Eletrônicos', 'smartphone.jpg', 2);
-
 DELIMITER $$
 CREATE PROCEDURE update_Produto (_id INT, _nome VARCHAR(30) , _descricao VARCHAR(255) , _preco DECIMAL(10,2) , _qntEstoque INT , _categoria VARCHAR(30), _imagem VARCHAR(255), _idUsuario INT) 
 BEGIN
@@ -107,7 +99,6 @@ BEGIN
 END $$
 DELIMITER ;
 
-CALL update_Produto(10, 'Jaqueta Corta Vento', 'Jaqueta leve e impermeável para esportes ao ar livre.', 199.90, 35, 'Roupas', 'jaqueta.jpg', 2);
 
 DELIMITER $$
 CREATE PROCEDURE delete_Produto( _id INT, _idUsuario INT)
@@ -117,7 +108,6 @@ BEGIN
 END $$
 DELIMITER ;
 
-CALL delete_Produto(3, 2);
 
 -- View Produto
 
