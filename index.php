@@ -6,8 +6,7 @@
 
     $controller = new UsuarioController();
     $usuarios = $controller->indexUsuario();
-    global  $usuarios;
-
+global $usuarios;
 
 ?>
 
@@ -16,7 +15,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Css/CabecalhoHome.css" />
+      <link rel="stylesheet" href="Css/IndexHome.css"/>
     <title>Listify</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
@@ -26,59 +25,66 @@
     />
   </head>
   <body>
-    <header>
+
+  <header>
       <div id="divLogo">
-        <img
-          id="imgPrincipalListify"
-          class="img-fluid"
-          src="Images/Logo/imgPrincipalListify.png"
-        />
+          <img
+                  id="imgPrincipalListify"
+                  class="img-fluid"
+                  src="Images/Logo/imgPrincipalListify.png"
+          />
       </div>
       <div class="menuDropdown" id="menuDropdown">
-        <ul
-          class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-center align-items-center"
-        >
-          <li class="nav-item dropdown">
-            <a
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <i class="bi bi-caret-left-fill"></i>
-            </a>
+          <ul
+                  class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-center align-items-center"
+          >
+              <li class="nav-item dropdown">
+                  <a
+                          href="#"
+                          role="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                  >
+                      <i class="bi bi-caret-left-fill"></i>
+                  </a>
 
-          <?php if ($usuarios) : ?>
-            <?php foreach ($usuarios as $usuario) : ?>
-            <ul class="dropdown-menu">
-              <li>
-                <a class="dropdown-item" href="Telas/Usuario/UsuarioEditarPerfil.php?editarPerfi=<?= $usuario->id ?>">Editar Perfil</a>
+                  <?php if ($usuarios) : ?>
+                  <?php foreach ($usuarios
+
+                  as $usuario) : ?>
+                  <ul class="dropdown-menu">
+                      <li>
+                          <a class="dropdown-item"
+                             href="Telas/Usuario/UsuarioEditarPerfil.php?editarPerfi=<?= $usuario->id ?>">Editar
+                              Perfil</a>
+                      </li>
+                      <li>
+                          <a class="dropdown-item" href="#">Ver Perfil</a>
+                      </li>
+                      <li>
+                          <a class="dropdown-item" href="#">Sua Loja</a>
+                      </li>
+                      <li>
+                          <hr class="dropdown-divider"/>
+                      </li>
+                      <li>
+                          <a class="dropdown-item" href="#">Sair</a>
+                      </li>
+                  </ul>
               </li>
-              <li>
-                <a class="dropdown-item" href="#">Ver Perfil</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">Sua Loja</a>
-              </li>
-              <li><hr class="dropdown-divider" /></li>
-              <li>
-                <a class="dropdown-item" href="#">Sair</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
+          </ul>
           <?php endforeach; ?>
-      <?php endif; ?>
+          <?php endif; ?>
 
-        <img
-          id="img-perfil-padrao"
-          class="img-fluid"
-          src="Images/Icons/PerfilPadrao.png"
-        />
+          <img
+                  id="img-perfil-padrao"
+                  class="img-fluid"
+                  src="Images/Icons/PerfilPadrao.png"
+          />
       </div>
-    </header>
+  </header>
 
-    <nav>
+  <aside class="categorias-home">
       <ul>
         <li class="nav-item dropdown">
           <a
@@ -88,16 +94,36 @@
             aria-expanded="false"
             >Categoria</a
           >
+
           <ul class="dropdown-menu dropdown-menu-dark">
             <li><a class="dropdown-item" href="#">Action</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
+
         </li>
       </ul>
+
       <a href="#">Lista de Produtos</a>
       <a href="#">Fabricantes</a>
-    </nav>
+  </aside>
+
+  <main>
+
+      <section class="letra-destaque">
+          <h1><span>Produto</span> <span>Lançamento</span></h1>
+          <button>Ver Lista</button>
+      </section>
+
+      <section class="img-produto">
+          <article>
+              <img src="Images/Produto/#" >
+              <p>Descricao</p>
+              <button><a href="Telas/Produto/#"></a></button>
+          </article>
+      </section>
+
+  </main>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

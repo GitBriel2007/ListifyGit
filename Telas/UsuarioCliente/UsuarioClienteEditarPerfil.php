@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET["editarPerfil"])) {
 <body>
 <h1>Editar Perfil</h1>
 
-        <form method="post" action="UsuarioCadastro.php" enctype="multipart/form-data">
+        <form method="post" action="UsuarioClienteCadastro.php" enctype="multipart/form-data">
 
             <label for="fileToUpload">Imagem </label>
             <input type="file" placeholder="Selecione uma Boa Imagem" id="fileToUpload" name="usuario[fileToUpload]" required>
@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET["editarPerfil"])) {
                 <option value="fabricante">Fabricante</option>
             </select>
 
-            <button type="submit" name="cadastrar">Cadastrar</button>
+            <button type="submit" name="cadastrar">Editar</button>
         </form>
 </body>
 </html>

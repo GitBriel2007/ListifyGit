@@ -79,7 +79,7 @@ Class UsuarioController {
 
     public function uploadUsuario($usuario_imagem)
     {
-        $target_dir = __DIR__ . "/../Images/Usuario/";
+        $target_dir = __DIR__ . "/../Images/UsuarioCliente/";
         $uploadOk = 1;
         $target_file = $target_dir . $usuario_imagem["name"]["fileToUpload"];
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));

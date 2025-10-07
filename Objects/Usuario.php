@@ -49,9 +49,10 @@ class Usuario
 
     public function cadastrar()
     {
+        $senha_hash = password_hash($this->senha, PASSWORD_DEFAULT);
         $sql = "CALL create_Usuario ( :senha , :cpf , :nome ,  :email , :telefone,  :imagem ,  :tipoUsuario )";
         $stmt = $this->bd->prepare($sql);
-        $stmt->bindParam(':senha', $this->senha, PDO::PARAM_STR);
+        $stmt->bindParam(':senha', $senha_hash, PDO::PARAM_STR);
         $stmt->bindParam(':cpf', $this->cpf, PDO::PARAM_STR);
         $stmt->bindParam(':nome', $this->nome, PDO::PARAM_STR);
         $stmt->bindParam(':email', $this->email, PDO::PARAM_STR);
@@ -68,10 +69,11 @@ class Usuario
 
     public function atualizar()
     {
+        $senha_hash = password_hash($this->senha, PASSWORD_DEFAULT);
         $sql = "CALL update_Usuario ( :id , :senha , :cpf , :nome ,  :email , :telefone,  :imagem ,  :tipoUsuario )";
         $stmt = $this->bd->prepare($sql);
         $stmt->bindParam(':id', $this->id, PDO::PARAM_INT);
-        $stmt->bindParam(':senha', $this->senha, PDO::PARAM_STR);
+        $stmt->bindParam(':senha', $senha_hash, PDO::PARAM_STR);
         $stmt->bindParam(':cpf', $this->cpf, PDO::PARAM_STR);
         $stmt->bindParam(':nome', $this->nome, PDO::PARAM_STR);
         $stmt->bindParam(':email', $this->email, PDO::PARAM_STR);
@@ -96,6 +98,26 @@ class Usuario
             return true;
         } else {
             return false;
+        }
+    }
+
+    public function login() {
+        $sql = "SELECT * FROM  usuario  WHERE email = :email";
+        $stmt = $this->bd->prepare($sql);
+        $stmt->bindParam(':email', $this->email, PDO::PARAM_STR);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_OBJ);
+
+        if ($result) {
+            if (password_verify($this->senha, $result->senha)) {
+                session_start();
+                $_SESSION['usuario'] = $result;
+                header('Location: index.php');
+            } else {
+                header('Location: Login.php');
+                return false;
+                exit();
+            }
         }
     }
 

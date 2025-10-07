@@ -5,8 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fca45c5-4cb6-479e-86d1-ce6a2e3e5496" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Images/Icons/Lock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Icons/Search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Icons/User.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Login/RecuperarSenha.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Telas/UsuarioFabricante/FabricanteCadastro.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Telas/UsuarioFabricante/HomeFabricante.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Telas/UsuarioFabricante/PainelOutrosFabricantes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Telas/UsuarioFabricante/UsuarioFabricanteEditarPerfil.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/Configs/Database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CatalogoProdutos.sql" beforeDir="false" afterPath="$PROJECT_DIR$/CatalogoProdutos.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/UsuarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UsuarioController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Css/CabecalhoHome.css" beforeDir="false" afterPath="$PROJECT_DIR$/Css/IndexHome.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Css/Main.css" beforeDir="false" afterPath="$PROJECT_DIR$/Css/Main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Login/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Login/Login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Objects/Usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/Usuario.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telas/Usuario/PainelUsuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/Telas/UsuarioCliente/PainelVerFabricantes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telas/Usuario/UsuarioCadastro.php" beforeDir="false" afterPath="$PROJECT_DIR$/Telas/UsuarioCliente/UsuarioClienteCadastro.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telas/Usuario/UsuarioEditarPerfil.php" beforeDir="false" afterPath="$PROJECT_DIR$/Telas/UsuarioCliente/UsuarioClienteEditarPerfil.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +32,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="PHP File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -32,7 +55,7 @@
     &quot;accountId&quot;: &quot;80b392b2-6eed-452b-b851-44cba365ea69&quot;
   }
 }</component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.0.25" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -51,7 +74,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/gabriel.nsantos40/Desktop/ListifyGit/Telas/Usuario",
+    "last_opened_file_path": "C:/Users/gabriel.nsantos40/Desktop/ListifyGit",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -64,14 +87,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit" />
+      <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit\Images" />
+      <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit\Telas" />
+      <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit\Login" />
       <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit\Telas\Usuario" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit\Telas\UsuarioFabricante" />
+      <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit\Images\Icons" />
       <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit\Login" />
       <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit\Telas\Usuario" />
       <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit\Telas\Produto" />
-      <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit\Images\Icons" />
-      <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit\Images\Perfil" />
     </key>
   </component>
   <component name="RunManager">
@@ -82,10 +109,13 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-PS-252.26830.95" />
-        <option value="bundled-php-predefined-a98d8de5180a-9b563d34894c-com.jetbrains.php.sharedIndexes-PS-252.26830.95" />
+        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-PS-252.23892.419" />
+        <option value="bundled-php-predefined-a98d8de5180a-c72577f2c82f-com.jetbrains.php.sharedIndexes-PS-252.23892.419" />
       </set>
     </attachedChunks>
+  </component>
+  <component name="StructureViewState">
+    <option name="selectedTab" value="PHP" />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -105,6 +135,7 @@
       <workItem from="1759769508810" duration="10961000" />
       <workItem from="1759784550907" duration="1692000" />
       <workItem from="1759786397802" duration="1540000" />
+      <workItem from="1759857314315" duration="10069000" />
     </task>
     <servers />
   </component>

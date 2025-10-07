@@ -1,10 +1,10 @@
 <?php
 
-include_once 'objects/AlunoController.php';
+include_once __DIR__ . "/../Controllers/UsuarioController.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST["email"]) && isset($_POST["senha"])) {
-        $controller = new AlunoController();
+        $controller = new UsuarioController();
         $controller->login($_POST["email"], $_POST["senha"]);
     }
 }
@@ -17,18 +17,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login</title>
-    <link rel="stylesheet" href="styleLogin.css ">
+    <link rel="stylesheet" href="">
 </head>
 <body>
-<form action="login.php" method="post">
-    <h1>Login</h1>
-    <p value=""></p>
-    <label for="email">Email</label>
-    <input type="text" name="email" id="email">
-    <label for="senha">Senha</label>
-    <input type="text" name="senha" id="senha">
-    <button>Logar</button>
-    <a href="cadastro.php">Cadastrar</a>
+
+<form action="Login.php" method="post">
+    <h1>Listify</h1>
+    <div class="input">
+        <input type="email" placeholder="exemplo@com.com" id="email">
+        <img src="../Images/Icons/User.png">
+    </div>
+
+    <a href="#API">Esqueceu sua senha?</a>
+    <div>
+        <input type="password" placeholder="Senha" id="senha">
+        <img src="../Images/Icons/Lock.png">
+    </div>
+
+    <button>Log in</button>
+    <a href="../Telas/UsuarioCliente/UsuarioClienteCadastro.php">Não tem uma conta? Resgistrar</a>
 </form>
 
 </body>

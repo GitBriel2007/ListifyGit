@@ -44,7 +44,7 @@ INSERT INTO produto (nome, descricao, preco, qntEstoque, categoria, imagem, idUs
 ('Mochila Executiva', 'Mochila resistente à água com compartimento para notebook.', 249.99, 60, 'Acessórios', 'mochila.jpg', 5),
 ('Jaqueta Corta Vento', 'Jaqueta leve e impermeável para esportes ao ar livre.', 199.90, 35, 'Roupas', 'jaqueta.jpg', 2);
 
--- Procedure Usuario
+-- Procedure UsuarioCliente
 
 DELIMITER $$
 CREATE PROCEDURE create_Usuario (_senha VARCHAR(255), _cpf VARCHAR(20), _nome VARCHAR(30), _email VARCHAR(30) , _telefone VARCHAR(15), _imagem VARCHAR(255),  _tipoUsuario VARCHAR(20))
@@ -69,7 +69,7 @@ BEGIN
 END $$
 DELIMITER ;
 
--- View Usuario
+-- View UsuarioCliente
 
 CREATE VIEW READ_ALL_USUARIOS AS
 SELECT * FROM usuario ORDER BY nome ASC;
@@ -99,7 +99,6 @@ BEGIN
 END $$
 DELIMITER ;
 
-
 DELIMITER $$
 CREATE PROCEDURE delete_Produto( _id INT, _idUsuario INT)
 BEGIN
@@ -107,7 +106,6 @@ BEGIN
 		WHERE id = _id AND idUsuario = _idUsuario;
 END $$
 DELIMITER ;
-
 
 -- View Produto
 

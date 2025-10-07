@@ -1,3 +1,4 @@
+/*
 * {
   margin: 0px;
   padding: 0px;
@@ -41,11 +42,11 @@ header {
 }
 
 .menu {
-  display: none; /* escondido por padrão */
+  display: none; escondido por padrão
 }
 
 #menuToggle:checked + .toggleButton + .menu {
-  display: block; /* mostra o menu quando o checkbox está marcado */
+  display: block; /* mostra o menu quando o checkbox está marcado
 }
 
 ul,
@@ -56,4 +57,9 @@ a {
   color: black;
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
+}
+*/
+
+placeholder {
+    color: #26547c;
 }
