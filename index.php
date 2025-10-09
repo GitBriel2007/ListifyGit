@@ -105,7 +105,7 @@ global $usuarios;
       </ul>
 
       <a href="#">Lista de Produtos</a>
-      <a href="#">Fabricantes</a>
+      <a href="Telas/UsuarioCliente/PainelVerFabricantes.php">Fabricantes</a>
   </aside>
 
   <main>

@@ -3,46 +3,50 @@
 include_once __DIR__ . '/../Configs/Database.php';
 include_once __DIR__ . '/../Objects/Usuario.php';
 
-Class UsuarioController {
-   private $bd;
-   private $usuario;
+class UsuarioController
+{
+    private $bd;
+    private $usuario;
 
-   function __construct() {
-       $banco = new Database();
-       $this->bd = $banco->conectar();
-       $this->usuario = new Usuario($this->bd);
-   }
+    function __construct()
+    {
+        $banco = new Database();
+        $this->bd = $banco->conectar();
+        $this->usuario = new Usuario($this->bd);
+    }
 
-   public function indexUsuario() {
-       return $this->usuario->lerTodosUsuarios();
-   }
+    public function indexUsuario()
+    {
+        return $this->usuario->lerTodosUsuarios();
+    }
 
-    public function pesquisarUsuario($nome) {
+    public function pesquisarUsuario($nome)
+    {
         return $this->usuario->lerUsuario($nome);
     }
 
-    public function pesquisarUsuarioID($id) {
+    public function pesquisarUsuarioID($id)
+    {
         return $this->usuario->pesquisaUsuario($id);
     }
 
-    public function cadastrarUsuario($dados, $usuario_imagem)
+    public function cadastrarUsuario($dados)
     {
 
-        if ($this->uploadUsuario($usuario_imagem)) {
-            $this->usuario->senha = $dados["senha"];
-            $this->usuario->cpf = $dados["cpf"];
-            $this->usuario->nome = $dados["nome"];
-            $this->usuario->email = $dados["email"];
-            $this->usuario->telefone = $dados["telefone"];
-            $this->usuario->tipoUsuario = $dados["tipoUsuario"];
+        $this->usuario->senha = $dados["senha"];
+        $this->usuario->cpf = $dados["cpf"];
+        $this->usuario->nome = $dados["nome"];
+        $this->usuario->email = $dados["email"];
+        $this->usuario->telefone = $dados["telefone"];
+        $this->usuario->tipoUsuario = $dados["tipoUsuario"];
 
-            if ($this->usuario->cadastrar()) {
-                header("Location: index.php");
-                exit();
-            }
-
-            return false;
+        if ($this->usuario->cadastrar()) {
+            header("Location: index.php");
+            exit();
         }
+
+        return false;
+
     }
 
     public function atualizarUsuario($dados, $usuario_imagem)
@@ -67,18 +71,20 @@ Class UsuarioController {
         }
     }
 
-    public function excluirUsuario($id) {
-       $this->usuario->id = $id;
+    public function excluirUsuario($id)
+    {
+        $this->usuario->id = $id;
 
-       if ($this->usuario->excluir()) {
+        if ($this->usuario->excluir()) {
             header("Location: index.php");
             exit();
-       }
+        }
 
     }
 
     public function uploadUsuario($usuario_imagem)
     {
+        $imagemPadrao = __DIR__ . "/../Images/Icons/PerfilPadrao.png";
         $target_dir = __DIR__ . "/../Images/UsuarioCliente/";
         $uploadOk = 1;
         $target_file = $target_dir . $usuario_imagem["name"]["fileToUpload"];
@@ -113,8 +119,22 @@ Class UsuarioController {
             if (move_uploaded_file($usuario_imagem["tmp_name"]["fileToUpload"], $uploadFile)) {
                 return true;
             } else {
-                return false;
+                return $imagemPadrao;
             }
         }
+
+        if (empty($usuario_imagem["name"])) {
+            return $imagemPadrao;
+        }
+
     }
+
+    public function loginUsuario($email, $senha)
+    {
+        $this->usuario->email = $email;
+        $this->usuario->senha = $senha;
+        return $this->usuario->login();
+
+    }
+
 }

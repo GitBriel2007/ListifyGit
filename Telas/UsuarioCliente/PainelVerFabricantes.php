@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 include_once __DIR__ . '/../../Configs/Database.php';
 include_once __DIR__ . '/../../Objects/Usuario.php';
 include_once __DIR__ . '/../../Controllers/UsuarioController.php';
@@ -7,6 +9,16 @@ include_once __DIR__ . '/../../Controllers/UsuarioController.php';
 $controller = new UsuarioController();
 $usuarios = $controller->indexUsuario();
 global $usuarios;
+
+if (!isset($_SESSION['usuario'])) {
+
+    if (basename($_SERVER['PHP_SELF']) != "Login.php") {
+        $_SESSION['redirect_after_login'] = $_SERVER['REQUEST_URI'];
+    }
+
+    header('Location: ../../Login/Login.php');
+    exit();
+}
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['pesquisa'])) {
@@ -31,6 +43,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     />
 </head>
 <body>
+
+<?php include_once __DIR__ . '/../../Login/Header.php'; ?>
 
 <header>
     <img
@@ -122,7 +136,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <h1>Fabricantes</h1>
 
         <article class="img-perfil-fabricante">
-            <img src="../../Images/UsuarioFabricante/#" />
+            <img src="../../Images/UsuarioFabricante/#"/>
             <h2>Nome</h2>
         </article>
 

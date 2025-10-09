@@ -1,6 +1,6 @@
 <?php
-    if (isset($_SESSION['aluno'])) : ?>
-        <span>Logado: <?= $_SESSION['aluno']->nome ?> </span>
+    if (isset($_SESSION['usuario'])) : ?>
+        <span>Logado: <?= $_SESSION['usuario'] ?> </span>
     <?php endif ?>
-<a href="../index.php">Inicio</a>
+<a href="../index.php"><img src=../Images/Logo/imgPrincipalListify.png ></a>
 <a href="logout.php">Sair</a>

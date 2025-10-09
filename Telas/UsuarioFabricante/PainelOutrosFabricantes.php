@@ -8,6 +8,14 @@ $controller = new UsuarioController();
 $usuarios = $controller->indexUsuario();
 global $usuarios;
 
+session_start();
+
+if (!isset($_SESSION['usuario'])) {
+    $_SESSION['redirect_after_login'] = $_SERVER['REQUEST_URI'];
+    header('Location: ../../Login/LoginNaoCadastrado.php');
+    exit();
+}
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['pesquisa'])) {
         $usuarios = $controller->pesquisarUsuario($_POST['pesquisa']);
@@ -92,34 +100,34 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <button type="submit">Pesquisar</button>
 </form>
 
-        <table>
-             <thead>
-                <tr>
-                    <th><h2>Nome</h2></th>
-                    <th><h2>Email</h2></th>
-                    <th><h2>Cpf</h2></th>
-                    <th><h2>Telefone</h2></th>
-                    <th><h2>Senha</h2></th>
-                    <th><h2>Tipo</h2></th>
-                </tr>
-            </thead>
+<table>
+    <thead>
+    <tr>
+        <th><h2>Nome</h2></th>
+        <th><h2>Email</h2></th>
+        <th><h2>Cpf</h2></th>
+        <th><h2>Telefone</h2></th>
+        <th><h2>Senha</h2></th>
+        <th><h2>Tipo</h2></th>
+    </tr>
+    </thead>
 
-            <tbody>
-                <?php if ($usuarios) : ?>
-                    <?php foreach ($usuarios as $usuario) : ?>
-                        <tr>
-                            <td><h3><?= $usuario->id ?></h3></td>
-                            <td><h3><?= $usuario->nome ?></h3></td>
-                            <td><h3><?= $usuario->email ?></h3></td>
-                            <td><h3><?= $usuario->cpf ?></h3></td>
-                            <td><h3><?= $usuario->telefone ?></h3></td>
-                            <td><h3><?= $usuario->senha ?></h3></td>
-                            <td><h3><?= $usuario->tipo ?></h3></td>
-                        </tr>
-                     <?php endforeach; ?>
-                <?php endif; ?>
-            </tbody>
-        </table>
+    <tbody>
+    <?php if ($usuarios) : ?>
+        <?php foreach ($usuarios as $usuario) : ?>
+            <tr>
+                <td><h3><?= $usuario->id ?></h3></td>
+                <td><h3><?= $usuario->nome ?></h3></td>
+                <td><h3><?= $usuario->email ?></h3></td>
+                <td><h3><?= $usuario->cpf ?></h3></td>
+                <td><h3><?= $usuario->telefone ?></h3></td>
+                <td><h3><?= $usuario->senha ?></h3></td>
+                <td><h3><?= $usuario->tipo ?></h3></td>
+            </tr>
+        <?php endforeach; ?>
+    <?php endif; ?>
+    </tbody>
+</table>
 
 <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

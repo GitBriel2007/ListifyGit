@@ -1,6 +1,6 @@
 <?php
 
-    include_once __DIR__  . '/../../Controllers/UsuarioController.php';
+    include_once __DIR__ . '/../Controllers/UsuarioController.php';
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $controller = new UsuarioController();
@@ -21,7 +21,7 @@
 <body>
 <h1>Cadastre-Se</h1>
 
-        <form method="post" action="FabricanteCadastro.php" enctype="multipart/form-data">
+        <form method="post" action="UsuarioCadastro.php" enctype="multipart/form-data">
             <label for="nome">Nome</label>
             <input type="text" placeholder="Nome" id="nome" name="usuario[nome]" required>
 

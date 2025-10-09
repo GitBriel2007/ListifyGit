@@ -2,6 +2,6 @@
 
 session_start();
 
-if (!isset($_SESSION['aluno'])) {
+if (!isset($_SESSION['usuario'])) {
     header('Location: login.php');
 }

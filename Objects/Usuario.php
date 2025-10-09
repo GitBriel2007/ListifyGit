@@ -80,7 +80,7 @@ class Usuario
         $stmt->bindParam(':telefone', $this->telefone, PDO::PARAM_STR);
         $stmt->bindParam(':imagem', $this->imagem, PDO::PARAM_STR);
         $stmt->bindParam(':tipoUsuario', $this->tipoUsuario, PDO::PARAM_STR);
-        
+
         if ($stmt->execute()) {
             return true;
         } else {
@@ -101,7 +101,8 @@ class Usuario
         }
     }
 
-    public function login() {
+    public function login()
+    {
         $sql = "SELECT * FROM  usuario  WHERE email = :email";
         $stmt = $this->bd->prepare($sql);
         $stmt->bindParam(':email', $this->email, PDO::PARAM_STR);
@@ -113,6 +114,7 @@ class Usuario
                 session_start();
                 $_SESSION['usuario'] = $result;
                 header('Location: index.php');
+                exit();
             } else {
                 header('Location: Login.php');
                 return false;
