@@ -7,7 +7,7 @@ CREATE TABLE usuario (
     senha VARCHAR(255) NOT NULL,
     cpf VARCHAR(20) NOT NULL UNIQUE,
     nome VARCHAR(30) NOT NULL,
-    email VARCHAR(30) NOT NULL,
+    email VARCHAR(30) NOT NULL UNIQUE,
     telefone VARCHAR(15) NOT NULL,
 	imagem VARCHAR(255),
     tipoUsuario VARCHAR(20) NOT NULL

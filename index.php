@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
     include_once __DIR__ . "/Configs/Database.php";
     include_once __DIR__ . "/Objects/Usuario.php";
     include_once __DIR__ . "/Controllers/UsuarioController.php";
@@ -34,7 +36,7 @@ global $usuarios;
                   src="Images/Logo/imgPrincipalListify.png"
           />
       </div>
-      <div class="menuDropdown" id="menuDropdown">
+      <div class="menuDropdown" id="menuDropdown"<?php if (!isset($_SESSION['usuario']))  echo "hidden";?>>
           <ul
                   class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-center align-items-center"
           >
@@ -48,33 +50,21 @@ global $usuarios;
                       <i class="bi bi-caret-left-fill"></i>
                   </a>
 
-                  <?php if ($usuarios) : ?>
-                  <?php foreach ($usuarios
-
-                  as $usuario) : ?>
                   <ul class="dropdown-menu">
                       <li>
                           <a class="dropdown-item"
-                             href="Telas/Usuario/UsuarioEditarPerfil.php?editarPerfi=<?= $usuario->id ?>">Editar
+                             href="Telas/UsuarioCliente/UsuarioClienteEditarPerfil.php<?php if (isset($_SESSION['usuario'])) ?>">Editar
                               Perfil</a>
-                      </li>
-                      <li>
-                          <a class="dropdown-item" href="#">Ver Perfil</a>
-                      </li>
-                      <li>
-                          <a class="dropdown-item" href="#">Sua Loja</a>
                       </li>
                       <li>
                           <hr class="dropdown-divider"/>
                       </li>
                       <li>
-                          <a class="dropdown-item" href="#">Sair</a>
+                          <a class="dropdown-item" <?php if (isset($_SESSION['usuario'])) ?> href="/Login/Logout.php">Sair</a>
                       </li>
                   </ul>
               </li>
           </ul>
-          <?php endforeach; ?>
-          <?php endif; ?>
 
           <img
                   id="img-perfil-padrao"

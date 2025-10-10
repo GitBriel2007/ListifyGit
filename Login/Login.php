@@ -4,42 +4,18 @@ session_start();
 
 include_once __DIR__ . "/../Controllers/UsuarioController.php";
 
-if (isset($_SESSION['usuario'])) {
-    header('Location: PainelVerFabricantes.php');
-    exit();
-}
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST["email"]) && isset($_POST["senha"])) {
         $controller = new UsuarioController();
-        $loginSuceso = $controller->loginUsuario($_POST["email"], $_POST["senha"]);
+        $login = $controller->loginUsuario($_POST["email"], $_POST["senha"]);
 
-        if ($loginSuceso) {
-            if (isset($_SESSION["redirect_after_login"])) {
-                $destiny = $_SESSION["redirect_after_login"];
-                unset($_SESSION["redirect_after_login"]);
-
-                if (basename($destiny) != "Login.php") {
-                    header('Location: ' . $destiny);
-                    exit();
-                }
-            }
-
-            header('Location: PainelVerFabricantes.php');
+        if ($login && isset($_SESSION['PainelVerFabricantes'])) {
+            header("Location: ../Telas/UsuarioCliente/PainelVerFabricantes.php");
             exit();
         }
     }
-}
 
-if (!isset($_SESSION['usuario'])) {
-    $currentPage = basename($_SERVER['PHP_SELF']);
-    if ($currentPage != "Login.php") {
-        $_SESSION['redirect_after_login'] = $_SERVER['REQUEST_URI'];
-    }
-    header('Location: ../../Login/Login.php');
-    exit();
 }
-
 
 ?>
 
@@ -56,13 +32,13 @@ if (!isset($_SESSION['usuario'])) {
 <form action="Login.php" method="post">
     <h1>Listify</h1>
     <div class="input">
-        <input type="email" placeholder="exemplo@com.com" id="email">
+        <input type="email" placeholder="exemplo@com.com" id="email" name="email" required>
         <img src="../Images/Icons/User.png">
     </div>
 
     <a href="RecuperarSenha.php">Esqueceu sua senha?</a>
     <div>
-        <input type="password" placeholder="Senha" id="senha">
+        <input type="password" placeholder="Senha" id="senha" name="senha" required>
         <img src="../Images/Icons/Lock.png">
     </div>
 

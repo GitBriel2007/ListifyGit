@@ -4,14 +4,11 @@ include_once __DIR__ . '/../../Controllers/UsuarioController.php';
 
 $controller = new UsuarioController();
 
-if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET["editarPerfil"])) {
-    $edicao = $controller->pesquisarUsuarioID($_GET["editarPerfil"]);
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["editar"])) {
+    $edicao = $controller->pesquisarUsuarioID($_POST["editar"]);
 
 } elseif ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["usuario"])) {
     $controller->atualizarUsuario($_POST['usuario'], $_FILES['usuario']);
-} else {
-    header("Location: index.php");
-
 }
 
 ?>
@@ -26,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET["editarPerfil"])) {
 <body>
 <h1>Editar Perfil</h1>
 
-<form method="post" action="../UsuarioCadastro.php" enctype="multipart/form-data">
+<form method="post" action="UsuarioClienteEditarPerfil.php" enctype="multipart/form-data">
 
     <label for="fileToUpload">Imagem </label>
     <input type="file" placeholder="Selecione uma Boa Imagem" id="fileToUpload" name="usuario[fileToUpload]"
@@ -45,18 +42,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET["editarPerfil"])) {
 
     <label for="telefone">Telefone</label>
     <input type="text" placeholder="(00) 00000-0000" maxlength="15" id="telefone" name="usuario[telefone]"
-           value="<?= $edicao->telefone ?> required>
+           value="<?= $edicao->telefone ?>" required>
 
     <label for=" senha">Senha</label>
-    <input type="password" placeholder="Senha" id="senha" name="usuario[senha]" value="<?= $edicao->senha?> required>
+    <input type="password" placeholder="Senha" id="senha" name="usuario[senha]" value="<?= $edicao->senha ?>" required>
 
     <label for="tipo">Tipo de Usuário</label>
-    <select id="tipo-usuario" name="usuario[tipoUsuario]" value="<?= $edicao->tipoUsuario?> required>
+    <select id="tipo-usuario" name="usuario[tipoUsuario]" value="<?= $edicao->tipoUsuario ?>" required>
         <option value="cliente">Cliente</option>
         <option value="fabricante">Fabricante</option>
     </select>
 
-    <button type="submit" name="cadastrar">Editar</button>
+    <button type="submit" name="editar">Editar</button>
 </form>
 </body>
 </html>

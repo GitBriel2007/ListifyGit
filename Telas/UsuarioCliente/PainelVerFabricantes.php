@@ -11,10 +11,7 @@ $usuarios = $controller->indexUsuario();
 global $usuarios;
 
 if (!isset($_SESSION['usuario'])) {
-
-    if (basename($_SERVER['PHP_SELF']) != "Login.php") {
-        $_SESSION['redirect_after_login'] = $_SERVER['REQUEST_URI'];
-    }
+    $_SESSION['PainelVerFabricantes'] = basename($_SERVER['PHP_SELF']);
 
     header('Location: ../../Login/Login.php');
     exit();
@@ -43,8 +40,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     />
 </head>
 <body>
-
-<?php include_once __DIR__ . '/../../Login/Header.php'; ?>
 
 <header>
     <img
@@ -91,11 +86,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </ul>
 
         <div id="divLogo">
-            <img
-                    id="imgPrincipalListify"
-                    class="img-fluid"
-                    src="../../Images/Logo/imgSecundariaListify.png"
-            />
+            <a href="../../index.php">
+                <img
+                        id="imgPrincipalListify"
+                        class="img-fluid"
+                        src="../../Images/Logo/imgSecundariaListify.png"
+                />
+            </a>
+
         </div>
 
     </div>

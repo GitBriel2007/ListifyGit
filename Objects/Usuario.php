@@ -111,16 +111,11 @@ class Usuario
 
         if ($result) {
             if (password_verify($this->senha, $result->senha)) {
-                session_start();
                 $_SESSION['usuario'] = $result;
-                header('Location: index.php');
-                exit();
-            } else {
-                header('Location: Login.php');
-                return false;
-                exit();
+                return true;
             }
         }
+        return false;
     }
 
 }
