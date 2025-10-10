@@ -12,7 +12,7 @@ CREATE TABLE usuario (
 	imagem VARCHAR(255),
     tipoUsuario VARCHAR(20) NOT NULL
 );
-
+select * from usuario;
 CREATE TABLE produto (
 	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 	nome VARCHAR(30) NOT NULL,
