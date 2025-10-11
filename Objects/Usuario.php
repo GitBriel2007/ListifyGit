@@ -111,8 +111,12 @@ class Usuario
 
         if ($result) {
             if (password_verify($this->senha, $result->senha)) {
-                $_SESSION['usuario'] = $result;
-                return true;
+                $_SESSION['usuario'] = [
+                    "email" => $result->email,
+                    "tipoUsuario" => $result->tipoUsuario,
+                ];
+
+                return $result->tipoUsuario;
             }
         }
         return false;

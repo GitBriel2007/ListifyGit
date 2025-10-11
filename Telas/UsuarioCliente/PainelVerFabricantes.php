@@ -70,12 +70,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             Perfil</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">Ver Perfil</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">Sua Loja</a>
-                    </li>
-                    <li>
                         <hr class="dropdown-divider"/>
                     </li>
                     <li>

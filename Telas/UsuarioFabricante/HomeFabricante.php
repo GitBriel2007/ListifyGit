@@ -63,9 +63,6 @@ global $usuarios;
                             Perfil</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">Ver Perfil</a>
-                    </li>
-                    <li>
                         <a class="dropdown-item" href="#">Sua Loja</a>
                     </li>
                     <li>

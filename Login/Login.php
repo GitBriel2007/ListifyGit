@@ -13,6 +13,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header("Location: ../Telas/UsuarioCliente/PainelVerFabricantes.php");
             exit();
         }
+
+        if ($login && isset($_SESSION['PainelProdutos'])) {
+            header("Location: ../Telas/UsuarioCliente/PainelVerFabricantes.php");
+            exit();
+        }
+/*
+        if ($login === "cliente") {
+            header("Location: ../index.php");
+            exit();
+        }
+
+        if ($login === "fabricante") {
+            header("Location: ../Telas/UsuarioFabricante/HomeFabricante.php");
+            exit();
+        }
+*/
     }
 
 }

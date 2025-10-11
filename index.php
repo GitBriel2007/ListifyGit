@@ -52,15 +52,17 @@ global $usuarios;
 
                   <ul class="dropdown-menu">
                       <li>
+                          <?php if (isset($_SESSION['usuario'])) :?>
                           <a class="dropdown-item"
-                             href="Telas/UsuarioCliente/UsuarioClienteEditarPerfil.php<?php if (isset($_SESSION['usuario'])) ?>">Editar
+                             href="Telas/UsuarioCliente/UsuarioClienteEditarPerfil.php?editarPerfil=<?= isset($_SESSION['usuario']) ?>">Editar
                               Perfil</a>
                       </li>
                       <li>
                           <hr class="dropdown-divider"/>
                       </li>
                       <li>
-                          <a class="dropdown-item" <?php if (isset($_SESSION['usuario'])) ?> href="/Login/Logout.php">Sair</a>
+                          <a class="dropdown-item"  href="/Login/Logout.php">Sair</a>
+                          <?php endif; ?>
                       </li>
                   </ul>
               </li>
@@ -94,7 +96,7 @@ global $usuarios;
         </li>
       </ul>
 
-      <a href="#">Lista de Produtos</a>
+      <a href="Telas/UsuarioCliente/PainelProdutos.php">Lista de Produtos</a>
       <a href="Telas/UsuarioCliente/PainelVerFabricantes.php">Fabricantes</a>
   </aside>
 
