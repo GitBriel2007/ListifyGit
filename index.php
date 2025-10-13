@@ -37,6 +37,8 @@ global $usuarios;
           />
       </div>
       <div class="menuDropdown" id="menuDropdown"<?php if (!isset($_SESSION['usuario']))  echo "hidden";?>>
+
+
           <ul
                   class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-center align-items-center"
           >
@@ -50,21 +52,25 @@ global $usuarios;
                       <i class="bi bi-caret-left-fill"></i>
                   </a>
 
+                  <?php if ($usuarios) : ?>
+                      <?php foreach ($usuarios as $usuario) : ?>
                   <ul class="dropdown-menu">
                       <li>
-                          <?php if (isset($_SESSION['usuario'])) :?>
+
                           <a class="dropdown-item"
-                             href="Telas/UsuarioCliente/UsuarioClienteEditarPerfil.php?editarPerfil=<?= isset($_SESSION['usuario']) ?>">Editar
+                             href="Telas/UsuarioCliente/UsuarioClienteEditarPerfil.php?editarPerfil=<?= $usuario->id ?>">Editar
                               Perfil</a>
                       </li>
                       <li>
                           <hr class="dropdown-divider"/>
                       </li>
                       <li>
-                          <a class="dropdown-item"  href="/Login/Logout.php">Sair</a>
-                          <?php endif; ?>
+                          <a class="dropdown-item" href="/Login/Logout.php">Sair</a>
                       </li>
+
                   </ul>
+                      <?php endforeach; ?>
+                  <?php endif; ?>
               </li>
           </ul>
 

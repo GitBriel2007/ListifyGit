@@ -18,17 +18,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header("Location: ../Telas/UsuarioCliente/PainelVerFabricantes.php");
             exit();
         }
-/*
-        if ($login === "cliente") {
+
+        if ($_SESSION["usuario"]["tipoUsuario"] === 'cliente') {
             header("Location: ../index.php");
             exit();
         }
 
-        if ($login === "fabricante") {
+        if ($_SESSION["tipoUsuario"] === 'fabricante') {
             header("Location: ../Telas/UsuarioFabricante/HomeFabricante.php");
             exit();
         }
-*/
+
     }
 
 }

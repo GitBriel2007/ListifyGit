@@ -6,7 +6,6 @@ $controller = new UsuarioController();
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET["editarPerfil"])) {
     $edicao = $controller->pesquisarUsuarioID($_GET["editarPerfil"]);
-
 } elseif ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["usuario"])) {
     $controller->atualizarUsuario($_POST['usuario'], $_FILES['usuario']);
 }

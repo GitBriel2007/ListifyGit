@@ -17,6 +17,17 @@ class Usuario
         $this->bd = $bd;
     }
 
+    public function lerUsuario($nome)
+    {
+        $nome = "%" . $nome . "%";
+        $sql = "SELECT * FROM READ_USUARIO";
+        $resultado = $this->bd->prepare($sql);
+        $resultado->bindParam(':nome', $nome);
+        $resultado->execute();
+
+        return $resultado->fetchAll(PDO::FETCH_OBJ);
+    }
+
     public function lerTodosUsuarios()
     {
         $sql = "SELECT * FROM READ_ALL_USUARIOS";
@@ -26,25 +37,14 @@ class Usuario
         return $resultado->fetchAll(PDO::FETCH_OBJ);
     }
 
-    public function lerUsuario($nome)
-    {
-        $nome = "%" . $nome . "%";
-        $sql = "SELECT * FROM READ_USUARIO";
-        $resultado = $this->bd->query($sql);
-        $resultado->bindParam(':nome', $nome, PDO::PARAM_STR);
-        $resultado->execute();
-
-        return $resultado->fetchAll(PDO::FETCH_OBJ);
-    }
-
     public function pesquisaUsuario($id)
     {
-        $sql = "SELECT * FROM SEARCH_USUARIO";
-        $resultado = $this->bd->query($sql);
-        $resultado->bindParam(':id', $id, PDO::PARAM_STR);
+        $sql = "SELECT * FROM SEARCH_USUARIO WHERE id = :id";
+        $resultado = $this->bd->prepare($sql);
+        $resultado->bindParam(':id', $id);
         $resultado->execute();
 
-        return $resultado->fetchAll(PDO::FETCH_OBJ);
+        return $resultado->fetch(PDO::FETCH_OBJ);
     }
 
     public function cadastrar()
