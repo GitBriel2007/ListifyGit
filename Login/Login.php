@@ -7,25 +7,31 @@ include_once __DIR__ . "/../Controllers/UsuarioController.php";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST["email"]) && isset($_POST["senha"])) {
         $controller = new UsuarioController();
-        $login = $controller->loginUsuario($_POST["email"], $_POST["senha"]);
+        $usuario = $controller->loginUsuario($_POST["email"], $_POST["senha"]);
 
-        if ($login && isset($_SESSION['PainelVerFabricantes'])) {
+        if ($usuario) {
+            $_SESSION['usuario_id'] = $usuario->id;
+            $_SESSION['usuario_nome'] = $usuario->nome;
+            $_SESSION['usuario_tipo'] = $usuario->tipo;
+
+            if ($_SESSION['usuario_tipo'] === 'cliente') {
+                header("Location: ../index.php");
+                exit();
+            }
+
+            if ($_SESSION["usuario_tipo"] === 'fabricante') {
+                header("Location: ../Telas/UsuarioFabricante/HomeFabricante.php");
+                exit();
+            }
+        }
+
+        if ($usuario && isset($_SESSION['PainelVerFabricantes'])) {
             header("Location: ../Telas/UsuarioCliente/PainelVerFabricantes.php");
             exit();
         }
 
-        if ($login && isset($_SESSION['PainelProdutos'])) {
+        if ($usuario && isset($_SESSION['PainelProdutos'])) {
             header("Location: ../Telas/UsuarioCliente/PainelVerFabricantes.php");
-            exit();
-        }
-
-        if ($_SESSION["usuario"]["tipoUsuario"] === 'cliente') {
-            header("Location: ../index.php");
-            exit();
-        }
-
-        if ($_SESSION["tipoUsuario"] === 'fabricante') {
-            header("Location: ../Telas/UsuarioFabricante/HomeFabricante.php");
             exit();
         }
 
