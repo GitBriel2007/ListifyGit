@@ -6,11 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0fca45c5-4cb6-479e-86d1-ce6a2e3e5496" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CatalogoProdutos.sql" beforeDir="false" afterPath="$PROJECT_DIR$/CatalogoProdutos.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/Header.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Login/Login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/Logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/Login/Logout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/Session.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Objects/Usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/Usuario.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Telas/UsuarioCliente/UsuarioClienteEditarPerfil.php" beforeDir="false" afterPath="$PROJECT_DIR$/Telas/UsuarioCliente/UsuarioClienteEditarPerfil.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
@@ -130,6 +125,7 @@
       <workItem from="1760115817794" duration="10240000" />
       <workItem from="1760186853143" duration="6918000" />
       <workItem from="1760374359795" duration="11280000" />
+      <workItem from="1760461438327" duration="7179000" />
     </task>
     <servers />
   </component>

@@ -1,6 +1,8 @@
 <?php
 
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
     include_once __DIR__ . "/Configs/Database.php";
     include_once __DIR__ . "/Objects/Usuario.php";
@@ -53,7 +55,7 @@ global $usuarios;
                   </a>
 
                   <?php if ($usuarios) : ?>
-                      <?php foreach ($usuarios as $usuario) : ?>
+                      <?php foreach($usuarios as $usuario) : ?>
                   <ul class="dropdown-menu">
                       <li>
 
@@ -115,7 +117,7 @@ global $usuarios;
 
       <section class="img-produto">
           <article>
-              <img src="Images/Produto/#" >
+              <img src="#" >
               <p>Descricao</p>
               <button><a href="Telas/Produto/#"></a></button>
           </article>
