@@ -41,7 +41,7 @@ class UsuarioController
         $this->usuario->tipoUsuario = $dados["tipoUsuario"];
 
         if ($this->usuario->cadastrar()) {
-            header("Location: index.php");
+            header("Location: ../Login/Login.php");
             exit();
         }
 

@@ -5,9 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fca45c5-4cb6-479e-86d1-ce6a2e3e5496" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Telas/UsuarioCliente/HomeCliente.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Telas/UsuarioFabricante/ListaProdutosFabricante.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CatalogoProdutos.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Banco/CatalogoProdutos.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/UsuarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UsuarioController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Login/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Login/Login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Objects/Produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/Produto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Objects/Usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/Usuario.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telas/UsuarioCliente/PainelProdutos.php" beforeDir="false" afterPath="$PROJECT_DIR$/Telas/UsuarioCliente/ListaProdutosCliente.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telas/UsuarioCliente/PainelVerFabricantes.php" beforeDir="false" afterPath="$PROJECT_DIR$/Telas/UsuarioCliente/PainelVerFabricantes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telas/UsuarioFabricante/HomeFabricante.php" beforeDir="false" afterPath="$PROJECT_DIR$/Telas/UsuarioFabricante/HomeFabricante.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telas/UsuarioFabricante/PainelOutrosFabricantes.php" beforeDir="false" afterPath="$PROJECT_DIR$/Telas/UsuarioFabricante/PainelOutrosFabricantes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,41 +58,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;PHP Built-in Web Server.Server Listify.executor&quot;: &quot;Run&quot;,
-    &quot;PHP Built-in Web Server.server.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/user_acronus/Documents/GitHub/ListifyGit/Telas/UsuarioCliente&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "PHP Built-in Web Server.Server Listify.executor": "Run",
+    "PHP Built-in Web Server.server.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/Users/gabriel.nsantos40/Desktop/ListifyGit/Telas/UsuarioCliente",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit\Telas\UsuarioCliente" />
+      <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit" />
       <recent name="C:\Users\user_acronus\Documents\GitHub\ListifyGit\Telas\UsuarioCliente" />
       <recent name="C:\Users\gabriel.nsantos40\Documents\GitHub\ListifyGit\Login" />
-      <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit" />
       <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit\Images" />
-      <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit\Telas" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\gabriel.nsantos40\Documents\GitHub\ListifyGit\Telas" />
       <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit\Telas\UsuarioFabricante" />
-      <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit\Images\Icons" />
-      <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit\Login" />
-      <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit\Telas\Usuario" />
+      <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit\Telas" />
+      <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit\Telas\UsuarioCliente" />
+      <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit\Banco" />
+      <recent name="C:\Users\gabriel.nsantos40\Documents\GitHub\ListifyGit\Telas" />
     </key>
   </component>
   <component name="RunManager">
@@ -94,8 +103,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-PS-252.26830.95" />
-        <option value="bundled-php-predefined-a98d8de5180a-9b563d34894c-com.jetbrains.php.sharedIndexes-PS-252.26830.95" />
+        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-PS-252.23892.419" />
+        <option value="bundled-php-predefined-a98d8de5180a-c72577f2c82f-com.jetbrains.php.sharedIndexes-PS-252.23892.419" />
       </set>
     </attachedChunks>
   </component>
@@ -127,6 +136,7 @@
       <workItem from="1760374359795" duration="11280000" />
       <workItem from="1760461438327" duration="7179000" />
       <workItem from="1760475423482" duration="4237000" />
+      <workItem from="1760634943591" duration="5487000" />
     </task>
     <servers />
   </component>

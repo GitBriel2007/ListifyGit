@@ -58,7 +58,6 @@ class Produto
         $stmt->bindParam(':categoria', $this->categoria, PDO::PARAM_STR);
         $stmt->bindParam(':imagem', $this->imagem, PDO::PARAM_STR);
         $stmt->bindParam(':idUsuario', $this->idUsuario, PDO::PARAM_STR);
-        $stmt->bindParam(':id', $this->id, PDO::PARAM_INT);
 
         if ($stmt->execute()) {
             return true;

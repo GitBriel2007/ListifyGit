@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <ul class="dropdown-menu">
                     <li>
                         <a class="dropdown-item"
-                           href="UsuarioClienteEditarPerfil.php">Editar
+                           href="UsuarioClienteEditarPerfil.php?editarPerfil=<?= $_SESSION['usuario']->id ?>">Editar
                             Perfil</a>
                     </li>
                     <li>
@@ -80,9 +80,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </ul>
 
         <div id="divLogo">
-            <a href="../../index.php">
+            <a href="HomeCliente.php">
                 <img
-                        id="imgPrincipalListify"
+                        id="imgSecundariaListify"
                         class="img-fluid"
                         src="../../Images/Logo/imgSecundariaListify.png"
                 />

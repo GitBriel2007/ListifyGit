@@ -7,11 +7,9 @@ include_once __DIR__ . '/../../Objects/Usuario.php';
 include_once __DIR__ . '/../../Controllers/UsuarioController.php';
 
 $controller = new UsuarioController();
-$usuarios = $controller->indexUsuario();
-global $usuarios;
 
 if (!isset($_SESSION['usuario'])) {
-    $_SESSION['PainelProdutos'] = basename($_SERVER['PHP_SELF']);
+    $_SESSION['ListaProdutos'] = basename($_SERVER['PHP_SELF']);
 
     header('Location: ../../Login/Login.php');
     exit();
@@ -66,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <ul class="dropdown-menu">
                     <li>
                         <a class="dropdown-item"
-                           href="UsuarioClienteEditarPerfil.php">Editar
+                           href="../UsuarioCliente/UsuarioClienteEditarPerfil.php?editarPerfil=<?= $_SESSION['usuario']->id ?>">Editar
                             Perfil</a>
                     </li>
                     <li>
@@ -80,9 +78,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </ul>
 
         <div id="divLogo">
-            <a href="../../index.php">
+            <a href="../UsuarioFabricante/HomeFabricante.php">
                 <img
-                        id="imgPrincipalListify"
+                        id="imgSecundariaListify"
                         class="img-fluid"
                         src="../../Images/Logo/imgSecundariaListify.png"
                 />
@@ -93,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
 
 
-    <form action="PainelVerFabricantes.php" method="post" enctype="multipart/form-data">
+    <form action="../UsuarioCliente/PainelVerFabricantes.php" method="post" enctype="multipart/form-data">
         <label for="pesquisa">Pesquisa</label>
         <input type="text" name="pesquisa" id="pesquisa">
         <button type="submit">Pesquisar</button>

@@ -84,11 +84,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </ul>
 
         <div id="divLogo">
-            <img
-                    id="imgPrincipalListify"
-                    class="img-fluid"
-                    src="../../Images/Logo/imgSecundariaListify.png"
-            />
+            <a href="../UsuarioFabricante/HomeFabricante.php">
+                <img
+                        id="imgSecundariaListify"
+                        class="img-fluid"
+                        src="../../Images/Logo/imgSecundariaListify.png"
+                />
+            </a>
         </div>
 
     </div>

@@ -1,19 +1,7 @@
 <?php
 
-session_start();
-
     include_once __DIR__ . "/Configs/Database.php";
-    include_once __DIR__ . "/Objects/Usuario.php";
-    include_once __DIR__ . "/Controllers/UsuarioController.php";
 
-    $controller = new UsuarioController();
-
-    if (isset($_SESSION['usuario_id'])) {
-
-        $usuario = $controller->pesquisarUsuarioID($_SESSION['usuario_id']);
-        global $usuario;
-    }
-var_dump($_SESSION['usuario_id']);
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +28,7 @@ var_dump($_SESSION['usuario_id']);
                   src="Images/Logo/imgPrincipalListify.png"
           />
       </div>
-      <div class="menuDropdown" id="menuDropdown" <?php if (!isset($_SESSION['usuario']))  echo "hidden";?>>
+      <div class="menuDropdown" id="menuDropdown">
 
 
           <ul
@@ -60,14 +48,7 @@ var_dump($_SESSION['usuario_id']);
                       <li>
 
                           <a class="dropdown-item"
-                             href="Telas/UsuarioCliente/UsuarioClienteEditarPerfil.php?editarPerfil=<?= $_SESSION['usuario_id']->id ?>">Editar
-                              Perfil</a>
-                      </li>
-                      <li>
-                          <hr class="dropdown-divider"/>
-                      </li>
-                      <li>
-                          <a class="dropdown-item" href="/Login/Logout.php">Sair</a>
+                             href="Login/Login.php">Fazer Login</a>
                       </li>
 
                   </ul>
@@ -103,7 +84,7 @@ var_dump($_SESSION['usuario_id']);
         </li>
       </ul>
 
-      <a href="Telas/UsuarioCliente/PainelProdutos.php">Lista de Produtos</a>
+      <a href="Telas/UsuarioCliente/ListaProdutosCliente.php">Lista de Produtos</a>
       <a href="Telas/UsuarioCliente/PainelVerFabricantes.php">Fabricantes</a>
   </aside>
 
