@@ -20,6 +20,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   </head>
   <body>
 
+  <header>
+
+
+  </header>
+
   <h1>Adicionar Produto</h1>
 
   <form method="post" action="AdicionarProduto.php" enctype="multipart/form-data">

@@ -4,20 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fca45c5-4cb6-479e-86d1-ce6a2e3e5496" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Telas/UsuarioCliente/HomeCliente.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Telas/UsuarioFabricante/ListaProdutosFabricante.php" afterDir="false" />
+    <list default="true" id="0fca45c5-4cb6-479e-86d1-ce6a2e3e5496" name="Changes" comment="Back-End: Login  e verificaçaõ de tipo funcionando, eu acho que correção do fluxo de paginas ate agora esta feito.">
+      <change afterPath="$PROJECT_DIR$/Telas/Produto/DetalhesProprioProduto.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CatalogoProdutos.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Banco/CatalogoProdutos.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/UsuarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UsuarioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Login/Login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/ProdutoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ProdutoController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Objects/Produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/Produto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Objects/Usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/Usuario.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Telas/UsuarioCliente/PainelProdutos.php" beforeDir="false" afterPath="$PROJECT_DIR$/Telas/UsuarioCliente/ListaProdutosCliente.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Telas/UsuarioCliente/PainelVerFabricantes.php" beforeDir="false" afterPath="$PROJECT_DIR$/Telas/UsuarioCliente/PainelVerFabricantes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Telas/UsuarioFabricante/HomeFabricante.php" beforeDir="false" afterPath="$PROJECT_DIR$/Telas/UsuarioFabricante/HomeFabricante.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Telas/UsuarioFabricante/PainelOutrosFabricantes.php" beforeDir="false" afterPath="$PROJECT_DIR$/Telas/UsuarioFabricante/PainelOutrosFabricantes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telas/Produto/AdicionarProduto.php" beforeDir="false" afterPath="$PROJECT_DIR$/Telas/Produto/AdicionarProduto.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +27,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -66,7 +63,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Back-End",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "C:/Users/gabriel.nsantos40/Desktop/ListifyGit/Telas/UsuarioCliente",
     "node.js.detected.package.eslint": "true",
@@ -136,22 +133,67 @@
       <workItem from="1760374359795" duration="11280000" />
       <workItem from="1760461438327" duration="7179000" />
       <workItem from="1760475423482" duration="4237000" />
-      <workItem from="1760634943591" duration="5487000" />
+      <workItem from="1760634943591" duration="8277000" />
     </task>
+    <task id="LOCAL-00001" summary="Back-End: Login  e verificaçaõ de tipo funcionando, eu acho que correção do fluxo de paginas ate agora esta feito.">
+      <option name="closed" value="true" />
+      <created>1760643888011</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1760643888011</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
+    <option name="RECENT_FILTERS">
       <map>
-        <entry key="MAIN">
+        <entry key="Branch">
           <value>
-            <State />
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="main" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="Back-End" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
     </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Back-End: Login  e verificaçaõ de tipo funcionando, eu acho que correção do fluxo de paginas ate agora esta feito." />
+    <option name="LAST_COMMIT_MESSAGE" value="Back-End: Login  e verificaçaõ de tipo funcionando, eu acho que correção do fluxo de paginas ate agora esta feito." />
   </component>
 </project>
