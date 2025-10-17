@@ -113,7 +113,7 @@ Class ProdutoController {
             $uploadOk = 0;
         }
 
-        if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
+        if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" && $imageFileType != "jfif") {
             $uploadOk = 0;
         }
 
