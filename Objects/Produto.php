@@ -40,7 +40,7 @@ class Produto
 
     public function pesquisaProduto($id)
     {
-        $sql = "SELECT * FROM pesquisar_Produto";
+        $sql = "SELECT * FROM pesquisar_Produto WHERE id = :id";
         $resultado = $this->bd->prepare($sql);
         $resultado->bindParam(':id', $id, PDO::PARAM_STR);
         $resultado->execute();
@@ -64,6 +64,8 @@ class Produto
         $stmt->bindParam(':idUsuario', $this->idUsuario, PDO::PARAM_STR);
 
         if ($stmt->execute()) {
+            $resultado = $stmt->fetch(PDO::FETCH_OBJ);
+            $_SESSION['produto'] = $resultado;
             return true;
         } else {
             return false;

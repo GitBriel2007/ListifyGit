@@ -1,7 +1,9 @@
 <?php
 
-?>
+include_once __DIR__ . '/../../Controllers/ProdutoController.php';
+include_once __DIR__ . '/../../Objects/Produto.php';
 
+?>
 <!doctype html>
 <html lang="pt-br">
 <head>
@@ -59,7 +61,7 @@
         </ul>
 
         <div id="divLogo">
-            <a href="HomeCliente.php">
+            <a href="../UsuarioFabricante/HomeFabricante.php">
                 <img
                         id="imgSecundariaListify"
                         class="img-fluid"
@@ -72,7 +74,7 @@
     </div>
 
 
-    <form action="PainelVerFabricantes.php" method="post" enctype="multipart/form-data">
+    <form action="DetalhesProprioProduto.php" method="post" enctype="multipart/form-data">
         <label for="pesquisa">Pesquisa</label>
         <input type="text" name="pesquisa" id="pesquisa">
         <button type="submit">Pesquisar</button>
@@ -102,7 +104,36 @@
 </header>
 
 <main>
-    <h1>Detalhes do Produto</h1>
+    <h1>Seu Produto</h1>
+
+    <article class="produto">
+        <figure class="img">
+            <?php if (isset($_SESSION['produto'])) : ?>
+            <img src="../../Images/Produto/<?= $_SESSION['produto']->imagem ?>">
+        </figure>
+
+        <section class="infos-produto">
+            <h2><?= $_SESSION['produto']->nome ?></h2>
+
+            <section class="descricao">
+                <p><?= $_SESSION['produto']->descricao ?></p>
+            </section>
+
+            <section class="ajuste">
+                <p> <?= $_SESSION['produto']->categoria ?></p>
+                <p> <?= $_SESSION['produto']->qntEstoque ?></p>
+                <p> <?= $_SESSION['produto']->preco ?></p>
+            </section>
+            <?php endif; ?>
+
+        </section>
+
+        <div class="buttons-link">
+            <a href="#">Excluir Produto</a>
+            <a href="EditarProduto.php?editarProduto">Atualizar Produto</a>
+        </div>
+    </article>
+
 </main>
 
 <script

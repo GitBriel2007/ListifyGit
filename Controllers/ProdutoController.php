@@ -43,7 +43,7 @@ Class ProdutoController {
             $this->usuario->idUsuario = $dados["idUsuario"];
 
             if ($this->produto->cadastrar()) {
-                header("Location: ../Telas/Produto/DetalhesProprioProduto");
+                header("Location: /../Telas/Produto/DetalhesProprioProduto.php");
                 exit();
             }
             return false;
@@ -113,7 +113,7 @@ Class ProdutoController {
             $uploadOk = 0;
         }
 
-        if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" && $imageFileType != "jfif") {
+        if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
             $uploadOk = 0;
         }
 
