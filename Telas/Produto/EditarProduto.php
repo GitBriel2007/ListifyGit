@@ -8,7 +8,7 @@ $edicao = null;
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET["editarProduto"])) {
     $edicao = $controller->pesquisarProdutoID($_GET["editarProduto"]);
 } elseif ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["produto"])) {
-    $controller->atualizarProduto($_POST['produto'], $_FILES['produto']);
+    $controller->editarProduto($_POST['produto'], $_FILES['produto']);
 }
 
 ?>
@@ -26,6 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET["editarProduto"])) {
             integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
             crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="/Css/EditarProduto.css">
 </head>
 <body>
 
@@ -116,10 +117,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET["editarProduto"])) {
 
     <form class="produto">
         <?php if (isset($_SESSION['produto'])) : ?>
-        <input type="file" name="produto[fileToUpload]" class="img" value="<?= $_SESSION['produto']->imagem ?>">
 
-        <img src="../../Images/Produto/">
+        <div class="img-produto" >
+            <img id="imgAtual"  src="../../Images/Produto/<?= $_SESSION['produto']->imagem ?>" alt="">
+            <div id="div-editar">
+                <img id="botaoEditar" src="/Images/Icons/Edit.png"  alt="">
+            </div>
+        </div>
 
+        <input type="file" name="produto[fileToUpload]" id="inputNovaImagem"
+               accept="image/jpg, image/png, image/jpeg, image/gif" style="display: none;">
 
         <section class="infos-produto">
             <input type="text" value="<?= $_SESSION['produto']->nome ?>">
@@ -138,13 +145,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET["editarProduto"])) {
 
         <div class="buttons-link">
             <a href="#">Excluir Produto</a>
-            <a href="teste.php?editarProduto">Atualizar Produto</a>
+            <a href="EditarProduto.php?editarProduto">Atualizar Produto</a>
         </div>
     </form>
 
-
 </main>
 
+<script src="/ScriptJS/ImagemNova.js"></script>
 <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

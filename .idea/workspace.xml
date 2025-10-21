@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fca45c5-4cb6-479e-86d1-ce6a2e3e5496" name="Changes" comment="Back-End: Login  e verificaçaõ de tipo funcionando, eu acho que correção do fluxo de paginas ate agora esta feito.">
-      <change afterPath="$PROJECT_DIR$/Telas/Produto/EditarProduto.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Css/EditarProduto.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Icons/Edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ScriptJS/ImagemNova.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/ProdutoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ProdutoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Objects/Produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/Produto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Telas/Produto/AdicionarProduto.php" beforeDir="false" afterPath="$PROJECT_DIR$/Telas/Produto/AdicionarProduto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Telas/Produto/DetalhesProprioProduto.php" beforeDir="false" afterPath="$PROJECT_DIR$/Telas/Produto/DetalhesProprioProduto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/configs/Database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telas/Produto/EditarProduto.php" beforeDir="false" afterPath="$PROJECT_DIR$/Telas/Produto/EditarProduto.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +24,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="PHP File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -52,9 +53,9 @@
     <setting file="file://$PROJECT_DIR$/index.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5
-}</component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
   <component name="ProjectId" id="33NyuiNDk6ulOec6HETLK566jlT" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -68,9 +69,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Back-End",
+    "git-widget-placeholder": "#1 on Back-End",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "C:/Users/gabriel.nsantos40/Desktop/ListifyGit/Telas/Produto",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -90,11 +92,11 @@
       <recent name="C:\Users\gabriel.nsantos40\Documents\GitHub\ListifyGit\Login" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit\Images\Icons" />
       <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit\Telas\Produto" />
       <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit\Telas\UsuarioFabricante" />
       <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit\Telas" />
       <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit\Telas\UsuarioCliente" />
-      <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit\Banco" />
     </key>
   </component>
   <component name="RunManager">
@@ -140,6 +142,7 @@
       <workItem from="1760475423482" duration="4237000" />
       <workItem from="1760634943591" duration="8277000" />
       <workItem from="1760978214713" duration="12550000" />
+      <workItem from="1761065147646" duration="11535000" />
     </task>
     <task id="LOCAL-00001" summary="Back-End: Login  e verificaçaõ de tipo funcionando, eu acho que correção do fluxo de paginas ate agora esta feito.">
       <option name="closed" value="true" />

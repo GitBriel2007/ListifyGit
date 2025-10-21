@@ -52,7 +52,7 @@ Class ProdutoController {
 
     }
 
-    public function atualizarProduto($dados, $produto_imagem)
+    public function editarProduto($dados, $produto_imagem)
     {
 
         if ($this->uploadProduto($produto_imagem)) {
@@ -73,17 +73,6 @@ Class ProdutoController {
             return false;
 
         }
-
-    }
-
-    public function excluirProduto($id , $idUsuario) {
-       $this->produto->id = $id;
-       $this->usuario->idUsuario = $idUsuario;
-
-       if ($this->produto->excluir($id)) {
-            header("Location: index.php");
-            exit();
-       }
 
     }
 
@@ -127,4 +116,16 @@ Class ProdutoController {
             }
         }
     }
+
+    public function excluirProduto($id , $idUsuario) {
+       $this->produto->id = $id;
+       $this->usuario->idUsuario = $idUsuario;
+
+       if ($this->produto->excluir($id)) {
+            header("Location: index.php");
+            exit();
+       }
+
+    }
+
 }
