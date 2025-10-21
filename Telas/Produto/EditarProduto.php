@@ -129,14 +129,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET["editarProduto"])) {
                accept="image/jpg, image/png, image/jpeg, image/gif" style="display: none;">
 
         <section class="infos-produto">
-            <input type="text" value="<?= $_SESSION['produto']->nome ?>">
+            <input type="text" placeholder="Nome do Produto" value="<?= $_SESSION['produto']->nome ?>">
 
-            <input type="text" value="<?= $_SESSION['produto']->descricao ?>">
+            <input type="text" placeholder="Descrição do Produto" value="<?= $_SESSION['produto']->descricao ?>">
 
             <div class="ajustes">
-                <input type="text" value="<?= $_SESSION['produto']->categoria ?>">
-                <input type="text" value="<?= $_SESSION['produto']->qntEstoque ?>">
-                <input type="text" value="<?= $_SESSION['produto']->preco ?>">
+                <input type="text" placeholder="Quantidade de Produtos Disponivel" value="<?= $_SESSION['produto']->qntEstoque ?>">
+                <input type="text" placeholder="R$0.00" value="<?= $_SESSION['produto']->preco ?>">
             </div>
 
             <?php endif; ?>
