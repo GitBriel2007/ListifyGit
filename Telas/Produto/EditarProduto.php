@@ -125,7 +125,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET["editarProduto"])) {
             </div>
         </div>
 
-        <input type="file" name="produto[fileToUpload]" id="inputNovaImagem"
+        <input type="file" name="produto[fileToUpload]" id="imgNova"
                accept="image/jpg, image/png, image/jpeg, image/gif" style="display: none;">
 
         <section class="infos-produto">
