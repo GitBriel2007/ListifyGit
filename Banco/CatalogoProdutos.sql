@@ -12,7 +12,7 @@ CREATE TABLE usuario (
 	imagem VARCHAR(255),
     tipoUsuario VARCHAR(20) NOT NULL
 );
-select * from usuario;
+select * from produto;
 CREATE TABLE produto (
 	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 	nome VARCHAR(30) NOT NULL,
@@ -87,6 +87,8 @@ CREATE PROCEDURE create_Produto (_nome VARCHAR(30) , _descricao VARCHAR(255) , _
 BEGIN
 	INSERT INTO produto ( nome, descricao, preco, qntEstoque, categoria, imagem, idUsuario)
 	VALUES ( _nome , _descricao , _preco , _qntEstoque , _categoria , _imagem , _idUsuario );
+    
+    SELECT * FROM produto WHERE id = LAST_INSERT_ID();
 END $$
 DELIMITER ;
 

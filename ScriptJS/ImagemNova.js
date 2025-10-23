@@ -1,5 +1,5 @@
 let botaoEditar = document.getElementById('botaoEditar');
-let imgNova = document.getElementById('imgNova');
+let imgNova = document.getElementById('imagem');
 let imgAtual = document.getElementById('imgAtual');
 
 imgNova.addEventListener('change', function () {

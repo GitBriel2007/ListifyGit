@@ -45,7 +45,7 @@ class Produto
         $resultado->bindParam(':id', $id, PDO::PARAM_STR);
         $resultado->execute();
 
-        return $resultado->fetchAll(PDO::FETCH_OBJ);
+        return $resultado->fetch(PDO::FETCH_OBJ);
     }
 
     public function cadastrar()
@@ -85,8 +85,7 @@ class Produto
         $stmt->bindParam(':qntEstoque', $this->qntEstoque, PDO::PARAM_INT);
         $stmt->bindParam(':categoria', $this->categoria, PDO::PARAM_STR);
         $stmt->bindParam(':imagem', $this->imagem, PDO::PARAM_STR);
-        $stmt->bindParam(':idUsuario', $this->idUsuario, PDO::PARAM_STR);
-        $stmt->bindParam(':id', $this->id, PDO::PARAM_INT);
+        $stmt->bindParam(':idUsuario', $this->idUsuario, PDO::PARAM_INT);
 
         return $stmt->execute();
     }

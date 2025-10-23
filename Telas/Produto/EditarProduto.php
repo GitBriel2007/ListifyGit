@@ -10,6 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET["editarProduto"])) {
 } elseif ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["produto"])) {
     $controller->editarProduto($_POST['produto'], $_FILES['produto']);
 }
+var_dump($edicao);
 
 ?>
 <!doctype html>
@@ -29,7 +30,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET["editarProduto"])) {
     <link rel="stylesheet" href="/Css/EditarProduto.css">
 </head>
 <body>
-
 
 <header>
     <div class="menuDropdown" id="menuDropdown">
@@ -51,7 +51,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET["editarProduto"])) {
                 >
                     <i class="bi bi-caret-left-fill"></i>
                 </a>
-
 
                 <ul class="dropdown-menu">
                     <li>
@@ -82,13 +81,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET["editarProduto"])) {
 
     </div>
 
-
-    <form action="DetalhesProprioProduto.php" method="post" enctype="multipart/form-data">
-        <label for="pesquisa">Pesquisa</label>
-        <input type="text" name="pesquisa" id="pesquisa">
-        <button type="submit">Pesquisar</button>
-    </form>
-
     <aside class="categorias-painel">
         <ul>
             <li class="nav-item dropdown">
@@ -115,37 +107,38 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET["editarProduto"])) {
 <main>
     <h1>Atualizar Produto</h1>
 
-    <form class="produto">
-        <?php if (isset($_SESSION['produto'])) : ?>
+    <form class="produto" action="EditarProduto.php" method="post">
+        <input type="text" name="produto[id]" id="id" value="<?= $edicao->id ?>" hidden>
 
         <div class="img-produto" >
-            <img id="imgAtual"  src="../../Images/Produto/<?= $_SESSION['produto']->imagem ?>" alt="">
+            <img id="imgAtual" src="../../Images/Produto/<?= $edicao->imagem ?>" alt="">
             <div id="div-editar">
                 <img id="botaoEditar" src="/Images/Icons/Edit.png"  alt="">
             </div>
         </div>
 
-        <input type="file" name="produto[fileToUpload]" id="imgNova"
+        <input type="file" name="produto[fileToUpload]" id="imagem"
+               value="<?= $edicao->imagem ?>"
                accept="image/jpg, image/png, image/jpeg, image/gif" style="display: none;">
 
         <section class="infos-produto">
-            <input type="text" placeholder="Nome do Produto" value="<?= $_SESSION['produto']->nome ?>">
+            <input type="text" name="produto[nome]" id="nome" placeholder="Nome do Produto"
+                   value="<?= $edicao->nome ?>">
 
-            <input type="text" placeholder="Descrição do Produto" value="<?= $_SESSION['produto']->descricao ?>">
+            <input type="text" name="produto[descricao]" id="descricao" placeholder="Descrição do Produto"
+                   value="<?= $edicao->descricao ?>">
 
             <div class="ajustes">
-                <input type="text" placeholder="Quantidade de Produtos Disponivel" value="<?= $_SESSION['produto']->qntEstoque ?>">
-                <input type="text" placeholder="R$0.00" value="<?= $_SESSION['produto']->preco ?>">
+                <input type="text" name="produto[qntEstoque]" id="qntEstoque"
+                       placeholder="Quantidade de Produtos Disponivel"
+                       value="<?= $edicao->qntEstoque ?>">
+                <input type="text" name="produto[preco]" id="preco" placeholder="R$0.00"
+                       value="<?= $edicao->preco ?>">
             </div>
-
-            <?php endif; ?>
 
         </section>
 
-        <div class="buttons-link">
-            <a href="#">Excluir Produto</a>
-            <a href="EditarProduto.php?editarProduto">Atualizar Produto</a>
-        </div>
+        <button type="submit">Editar</button>
     </form>
 
 </main>

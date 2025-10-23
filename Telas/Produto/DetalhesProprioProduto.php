@@ -3,6 +3,8 @@
 include_once __DIR__ . '/../../Controllers/ProdutoController.php';
 include_once __DIR__ . '/../../Objects/Produto.php';
 
+var_dump($_SESSION['produto']);
+
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -20,7 +22,6 @@ include_once __DIR__ . '/../../Objects/Produto.php';
     />
 </head>
 <body>
-
 
 <header>
     <div class="menuDropdown" id="menuDropdown">
@@ -130,7 +131,7 @@ include_once __DIR__ . '/../../Objects/Produto.php';
 
         <div class="buttons-link">
             <a href="#">Excluir Produto</a>
-            <a href="EditarProduto.php?editarProduto">Atualizar Produto</a>
+            <a href="EditarProduto.php?editarProduto=<?= $_SESSION['produto']->id ?>">Atualizar Produto</a>
         </div>
     </article>
 

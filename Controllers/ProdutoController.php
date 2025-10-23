@@ -40,7 +40,7 @@ Class ProdutoController {
             $this->produto->qntEstoque = $dados["qntEstoque"];
             $this->produto->categoria = $dados["categoria"];
             $this->produto->imagem = $this->imgName;
-            $this->usuario->idUsuario = $dados["idUsuario"];
+            $this->produto->idUsuario = $_SESSION["usuario"]->id;
 
             if ($this->produto->cadastrar()) {
                 header("Location: /../Telas/Produto/DetalhesProprioProduto.php");
@@ -64,10 +64,10 @@ Class ProdutoController {
             $this->produto->qntEstoque = $dados["qntEstoque"];
             $this->produto->categoria = $dados["categoria"];
             $this->produto->imagem = $this->imgName;
-            $this->usuario->idUsuario = $dados["idUsuario"];
+            $this->produto->idUsuario = $_SESSION["usuario"]->id;
 
             if ($this->produto->atualizar()) {
-                header("Location: index.php");
+                header("Location: ../Telas/Produto/DetalhesProprioProduto.php");
                 exit();
             }
             return false;
