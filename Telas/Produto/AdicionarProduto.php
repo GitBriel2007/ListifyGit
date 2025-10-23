@@ -20,6 +20,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   </head>
   <body>
 
+  <header>
+
+
+  </header>
+
   <h1>Adicionar Produto</h1>
 
   <form method="post" action="AdicionarProduto.php" enctype="multipart/form-data">
@@ -31,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
              name="produto[qntEstoque]" required>
 
       <label for="preco">Preço</label>
-      <input type="number" step="0.00" min="0" inputmode="numeric" placeholder="R$0.00" id="preco"
+      <input type="text" step="0.00" min="0" inputmode="numeric" placeholder="R$0.00" id="preco"
              name="produto[preco]" required>
 
       <label for="tipo">Categoria</label>

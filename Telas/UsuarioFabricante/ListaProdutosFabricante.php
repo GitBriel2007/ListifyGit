@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
 
 
-    <form action="../UsuarioCliente/PainelVerFabricantes.php" method="post" enctype="multipart/form-data">
+    <form action="../UsuarioFabricante/ListaProdutosFabricante.php" method="post" enctype="multipart/form-data">
         <label for="pesquisa">Pesquisa</label>
         <input type="text" name="pesquisa" id="pesquisa">
         <button type="submit">Pesquisar</button>

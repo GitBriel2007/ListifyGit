@@ -2,16 +2,19 @@
 
 include_once __DIR__ . '/../Configs/Database.php';
 include_once __DIR__ . '/../Objects/Produto.php';
+include_once __DIR__ . '/../Objects/Usuario.php';
 
 Class ProdutoController {
    private $bd;
    private $produto;
+   private $usuario;
     private $imgName;
 
    function __construct() {
        $banco = new Database();
        $this->bd = $banco->conectar();
        $this->produto = new Produto($this->bd);
+       $this->usuario = new Usuario($this->bd);
    }
 
    public function indexProduto() {
@@ -37,10 +40,10 @@ Class ProdutoController {
             $this->produto->qntEstoque = $dados["qntEstoque"];
             $this->produto->categoria = $dados["categoria"];
             $this->produto->imagem = $this->imgName;
-            $this->produto->idUsuario = $dados["idUsuario"];
+            $this->usuario->idUsuario = $dados["idUsuario"];
 
             if ($this->produto->cadastrar()) {
-                header("Location: index.php");
+                header("Location: /../Telas/Produto/DetalhesProprioProduto.php");
                 exit();
             }
             return false;
@@ -49,7 +52,7 @@ Class ProdutoController {
 
     }
 
-    public function atualizarProduto($dados, $produto_imagem)
+    public function editarProduto($dados, $produto_imagem)
     {
 
         if ($this->uploadProduto($produto_imagem)) {
@@ -61,7 +64,7 @@ Class ProdutoController {
             $this->produto->qntEstoque = $dados["qntEstoque"];
             $this->produto->categoria = $dados["categoria"];
             $this->produto->imagem = $this->imgName;
-            $this->produto->idUsuario = $dados["idUsuario"];
+            $this->usuario->idUsuario = $dados["idUsuario"];
 
             if ($this->produto->atualizar()) {
                 header("Location: index.php");
@@ -70,17 +73,6 @@ Class ProdutoController {
             return false;
 
         }
-
-    }
-
-    public function excluirProduto($id , $idUsuario) {
-       $this->produto->id = $id;
-       $this->produto->idUsuario = $idUsuario;
-
-       if ($this->produto->excluir($id, $idUsuario)) {
-            header("Location: index.php");
-            exit();
-       }
 
     }
 
@@ -124,4 +116,16 @@ Class ProdutoController {
             }
         }
     }
+
+    public function excluirProduto($id , $idUsuario) {
+       $this->produto->id = $id;
+       $this->usuario->idUsuario = $idUsuario;
+
+       if ($this->produto->excluir($id)) {
+            header("Location: index.php");
+            exit();
+       }
+
+    }
+
 }

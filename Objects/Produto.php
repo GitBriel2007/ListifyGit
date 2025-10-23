@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 class Produto
 {
     public $id;
@@ -38,7 +40,7 @@ class Produto
 
     public function pesquisaProduto($id)
     {
-        $sql = "SELECT * FROM pesquisar_Produto";
+        $sql = "SELECT * FROM pesquisar_Produto WHERE id = :id";
         $resultado = $this->bd->prepare($sql);
         $resultado->bindParam(':id', $id, PDO::PARAM_STR);
         $resultado->execute();
@@ -48,9 +50,11 @@ class Produto
 
     public function cadastrar()
     {
-        $sql = "CALL create_Produto ( :id, :nome , :descricao, :preco , :qntEstoque  , :categoria,  :imagem, :idUsuario)";
+
+        $this->idUsuario = $_SESSION['usuario']->id;
+
+        $sql = "CALL create_Produto ( :nome , :descricao, :preco , :qntEstoque  , :categoria,  :imagem, :idUsuario)";
         $stmt = $this->bd->prepare($sql);
-        $stmt->bindParam(':id', $this->id, PDO::PARAM_INT);
         $stmt->bindParam(':nome', $this->nome, PDO::PARAM_STR);
         $stmt->bindParam(':descricao', $this->descricao, PDO::PARAM_STR);
         $stmt->bindParam(':preco', $this->preco, PDO::PARAM_STR);
@@ -60,6 +64,8 @@ class Produto
         $stmt->bindParam(':idUsuario', $this->idUsuario, PDO::PARAM_STR);
 
         if ($stmt->execute()) {
+            $resultado = $stmt->fetch(PDO::FETCH_OBJ);
+            $_SESSION['produto'] = $resultado;
             return true;
         } else {
             return false;
@@ -68,6 +74,8 @@ class Produto
 
     public function atualizar()
     {
+        $this->idUsuario = $_SESSION['usuario']->id;
+
         $sql = "CALL update_Produto ( :id, :nome , :descricao, :preco , :qntEstoque  , :categoria,  :imagem, :idUsuario)";
         $stmt = $this->bd->prepare($sql);
         $stmt->bindParam(':id', $this->id, PDO::PARAM_INT);
@@ -85,6 +93,8 @@ class Produto
 
     public function excluir($id , $idUsuario)
     {
+        $this->idUsuario = $_SESSION['usuario']->id;
+
         $sql = "CALL delete_Produto( :id , :idUsuario )";
         $stmt = $this->bd->prepare($sql);
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
