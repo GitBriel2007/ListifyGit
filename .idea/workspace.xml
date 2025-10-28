@@ -6,14 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0fca45c5-4cb6-479e-86d1-ce6a2e3e5496" name="Changes" comment="Back-End: Login  e verificaçaõ de tipo funcionando, eu acho que correção do fluxo de paginas ate agora esta feito.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Banco/CatalogoProdutos.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Banco/CatalogoProdutos.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/ProdutoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ProdutoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Login/Login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Objects/Produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/Produto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ScriptJS/ImagemNova.js" beforeDir="false" afterPath="$PROJECT_DIR$/ScriptJS/ImagemNova.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Telas/Produto/DetalhesProprioProduto.php" beforeDir="false" afterPath="$PROJECT_DIR$/Telas/Produto/DetalhesProprioProduto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Telas/Produto/EditarProduto.php" beforeDir="false" afterPath="$PROJECT_DIR$/Telas/Produto/EditarProduto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Telas/UsuarioCliente/UsuarioClienteEditarPerfil.php" beforeDir="false" afterPath="$PROJECT_DIR$/Telas/UsuarioCliente/UsuarioClienteEditarPerfil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telas/Produto/AdicionarProduto.php" beforeDir="false" afterPath="$PROJECT_DIR$/Telas/Produto/AdicionarProduto.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +46,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Telas/Produto/AdicionarProduto.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/index.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
@@ -110,8 +104,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-PS-252.23892.419" />
-        <option value="bundled-php-predefined-a98d8de5180a-c72577f2c82f-com.jetbrains.php.sharedIndexes-PS-252.23892.419" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-PS-252.26830.95" />
+        <option value="bundled-php-predefined-a98d8de5180a-9b563d34894c-com.jetbrains.php.sharedIndexes-PS-252.26830.95" />
       </set>
     </attachedChunks>
   </component>
@@ -147,6 +141,7 @@
       <workItem from="1760978214713" duration="12550000" />
       <workItem from="1761065147646" duration="11535000" />
       <workItem from="1761244588969" duration="1416000" />
+      <workItem from="1761670167147" duration="4327000" />
     </task>
     <task id="LOCAL-00001" summary="Back-End: Login  e verificaçaõ de tipo funcionando, eu acho que correção do fluxo de paginas ate agora esta feito.">
       <option name="closed" value="true" />
