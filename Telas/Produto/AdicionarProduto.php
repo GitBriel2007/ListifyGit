@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
             crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/Css/EditarProduto.css">
+    <link rel="stylesheet" href="/Css/AdicionarProduto.css">
 </head>
 <body>
 
@@ -126,16 +126,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <label for="descricao">Descrição</label>
             <input type="text" placeholder="Descrição do Produto" id="descricao" name="produto[descricao]" required>
 
-            <label for="fileToUpload">Imagem do Produto</label>
-            <input type="file" placeholder="Selecione uma Boa do Produto" id="fileToUpload" name="produto[fileToUpload]"
-                   required>
+            <label for="fileToUpload">Imagem do seu Produto</label>
+            <div class="img-produto">
+                <img id="img-cadastrada" src="" alt="">
+                <div>
+                    <img  id="sem-imagem" src="../../Images/Icons/ImagemAdicionaProduto.png" alt="">
+                </div>
+
+            </div>
+
+            <input type="file" placeholder="Selecione uma Boa do Produto" id="fileToUpload"
+                   name="produto[fileToUpload]" style="display: none" required>
+
         </div>
 
         <button type="submit" name="cadastrar">Cadastrar</button>
     </form>
 </main>
 
-<script src="/ScriptJS/Imagens/ImagemNova.js"></script>
+<script src="/ScriptJS/Imagens/SemImagem.js"></script>
 <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

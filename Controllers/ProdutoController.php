@@ -80,8 +80,6 @@ Class ProdutoController {
     {
         $target_dir = __DIR__ . "/../Images/Produto/";
         $uploadOk = 1;
-
-
         $target_file = $target_dir . $produto_imagem["name"]["fileToUpload"];
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
         $random_name = uniqid('img', true) . "." . pathinfo($produto_imagem['name']['fileToUpload'], PATHINFO_EXTENSION);
@@ -96,7 +94,7 @@ Class ProdutoController {
 
         }
 
-        if (empty($produto_imagem["name"]['fileToUpload'])) {
+        if (!empty($produto_imagem["name"]['fileToUpload'])) {
             $this->imgName = __DIR__ . "/../Images/Produto/Icons/ImagemAdicionaProduto.png";
         }
 

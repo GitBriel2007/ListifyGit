@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fca45c5-4cb6-479e-86d1-ce6a2e3e5496" name="Changes" comment="Back-End: Ajustes no html">
-      <change afterPath="$PROJECT_DIR$/Images/Icons/ImagemAdicionaProduto.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ScriptJS/Imagens/SemImagem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Css/AdicionarProduto.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/ProdutoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ProdutoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ScriptJS/ImagemNova.js" beforeDir="false" afterPath="$PROJECT_DIR$/ScriptJS/Imagens/ImagemNova.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ScriptJS/Imagens/SemImagem.js" beforeDir="false" afterPath="$PROJECT_DIR$/ScriptJS/Imagens/SemImagem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Telas/Produto/AdicionarProduto.php" beforeDir="false" afterPath="$PROJECT_DIR$/Telas/Produto/AdicionarProduto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Telas/Produto/EditarProduto.php" beforeDir="false" afterPath="$PROJECT_DIR$/Telas/Produto/EditarProduto.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,12 +42,12 @@
     &quot;assignee&quot;: &quot;GitBriel2007&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/GitBriel2007/ListifyGit.git",
-    "accountId": "d33d8d00-4302-4cbd-a1f8-27844842cc4f"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/GitBriel2007/ListifyGit.git&quot;,
+    &quot;accountId&quot;: &quot;d33d8d00-4302-4cbd-a1f8-27844842cc4f&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Telas/Produto/AdicionarProduto.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/index.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
@@ -78,7 +76,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "Back-end",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/gabriel.nsantos40/Documents/GitHub/ListifyGit/ScriptJS/Imagens",
+    "last_opened_file_path": "C:/Users/gabriel.nsantos40/Documents/GitHub/ListifyGit/Css",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -92,11 +90,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gabriel.nsantos40\Documents\GitHub\ListifyGit\Css" />
       <recent name="C:\Users\gabriel.nsantos40\Documents\GitHub\ListifyGit\ScriptJS\Imagens" />
       <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit\Telas\Produto" />
       <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit\Telas\UsuarioCliente" />
       <recent name="C:\Users\gabriel.nsantos40\Desktop\ListifyGit" />
-      <recent name="C:\Users\user_acronus\Documents\GitHub\ListifyGit\Telas\UsuarioCliente" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\gabriel.nsantos40\Documents\GitHub\ListifyGit\ScriptJS\Imagens" />

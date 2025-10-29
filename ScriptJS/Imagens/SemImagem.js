@@ -1,5 +1,5 @@
-let botaoEditar = document.getElementById('botaoEditar');
-let imgNova = document.getElementById('imagem');
+let botaoEditar = document.getElementById('sem-imagem');
+let imgNova = document.getElementById('fileToUpload');
 let imgAtual = document.getElementById('imgAtual');
 
 imgNova.addEventListener('change', function () {
@@ -8,7 +8,7 @@ imgNova.addEventListener('change', function () {
         let reader = new FileReader();
 
         reader.addEventListener('load', function () {
-            imgAtual.src = reader.result;
+            imgNova.src = reader.result;
         });
 
         reader.readAsDataURL(file);
