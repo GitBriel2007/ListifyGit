@@ -79,11 +79,17 @@ Class ProdutoController {
     public function uploadProduto($produto_imagem)
     {
         $target_dir = __DIR__ . "/../Images/Produto/";
+        $semImg = __DIR__ . "/../Images/Icons/ImagemAdicionaProduto.png";
+        $this->imgName = $semImg;
+
+        if (!isset($produto_imagem["tmp_name"]["fileToUpload"]) || empty($produto_imagem["tmp_name"]["fileToUpload"])) {
+            return true;
+        }
+
         $uploadOk = 1;
         $target_file = $target_dir . $produto_imagem["name"]["fileToUpload"];
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
         $random_name = uniqid('img', true) . "." . pathinfo($produto_imagem['name']['fileToUpload'], PATHINFO_EXTENSION);
-        $this->imgName = $random_name;
         $uploadFile = $target_dir . $random_name;
         $check = getimagesize($produto_imagem["tmp_name"]["fileToUpload"]);
 
@@ -94,8 +100,9 @@ Class ProdutoController {
 
         }
 
-        if (!empty($produto_imagem["name"]['fileToUpload'])) {
-            $this->imgName = __DIR__ . "/../Images/Produto/Icons/ImagemAdicionaProduto.png";
+        if (empty($produto_imagem["name"]['fileToUpload'])) {
+            $this->imgName = $semImg;
+            return true;
         }
 
         if (file_exists($uploadFile)) {
@@ -114,11 +121,13 @@ Class ProdutoController {
             return false;
         } else {
             if (move_uploaded_file($produto_imagem["tmp_name"]["fileToUpload"], $uploadFile)) {
+                $this->imgName = $random_name;
                 return true;
             } else {
                 return false;
             }
         }
+
     }
 
     public function excluirProduto($id , $idUsuario) {

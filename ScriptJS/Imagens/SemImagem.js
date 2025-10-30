@@ -1,14 +1,14 @@
-let botaoEditar = document.getElementById('sem-imagem');
-let imgNova = document.getElementById('fileToUpload');
-let imgAtual = document.getElementById('imgAtual');
+let botaoEditar = document.getElementById('botaoEditar');
+let AdicionaImagem = document.getElementById('fileToUpload');
+let semImagem = document.getElementById('sem-imagem');
 
-imgNova.addEventListener('change', function () {
+AdicionaImagem.addEventListener('change', function () {
     let file = this.files[0];
     if (file) {
         let reader = new FileReader();
 
         reader.addEventListener('load', function () {
-            imgNova.src = reader.result;
+            semImagem.src = reader.result;
         });
 
         reader.readAsDataURL(file);
@@ -18,5 +18,5 @@ imgNova.addEventListener('change', function () {
 });
 
 botaoEditar.onclick = function () {
-    imgNova.click();
+    AdicionaImagem.click();
 }

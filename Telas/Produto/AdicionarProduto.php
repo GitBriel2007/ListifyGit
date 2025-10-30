@@ -128,9 +128,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             <label for="fileToUpload">Imagem do seu Produto</label>
             <div class="img-produto">
-                <img id="img-cadastrada" src="" alt="">
-                <div>
-                    <img  id="sem-imagem" src="../../Images/Icons/ImagemAdicionaProduto.png" alt="">
+                    <img id="sem-imagem" src="../../Images/Icons/ImagemAdicionaProduto.png" alt="">
+                <div id="div-editar">
+                    <img id="botaoEditar" src="/Images/Icons/Edit.png" alt="">
                 </div>
 
             </div>
